@@ -1,55 +1,33 @@
 import React from 'react';
 
 export default function ProgressInsight({ insight, daysOnProgram, weekNumber }) {
-  // Six-pack milestones
   const milestones = [
-    { day: 0, label: 'START', desc: 'Baseline' },
-    { day: 14, label: 'WEEK 2', desc: 'Building habits' },
-    { day: 30, label: 'MONTH 1', desc: 'First visible changes' },
-    { day: 60, label: 'MONTH 2', desc: 'Significant fat loss' },
-    { day: 90, label: 'MONTH 3', desc: 'Muscle definition' },
-    { day: 180, label: '6 MONTHS', desc: 'Six-pack visible' },
+    { day: 0,   label: 'Start',    desc: 'Baseline' },
+    { day: 14,  label: 'Week 2',   desc: 'Building habits' },
+    { day: 30,  label: 'Month 1',  desc: 'First changes' },
+    { day: 60,  label: 'Month 2',  desc: 'Fat loss visible' },
+    { day: 90,  label: 'Month 3',  desc: 'Definition' },
+    { day: 180, label: '6 Months', desc: 'Six-pack!' },
   ];
-
   const progress = Math.min((daysOnProgram / 180) * 100, 100);
 
   return (
-    <div style={{
-      background: 'var(--card)', border: '1px solid var(--border)',
-      borderRadius: '14px', padding: '24px',
-    }}>
-      <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--muted)', letterSpacing: '2px', marginBottom: '6px' }}>
-        PROGRESS TOWARD GOAL
-      </div>
-      <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '28px', letterSpacing: '2px', marginBottom: '20px' }}>
-        SIX-PACK JOURNEY 🎯
-      </h2>
+    <div style={{ background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '14px', padding: '24px', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+      <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--muted)', letterSpacing: '2px', marginBottom: '4px' }}>PROGRESS TOWARD GOAL</div>
+      <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '26px', letterSpacing: '2px', marginBottom: '20px', color: 'var(--text)' }}>SIX-PACK JOURNEY 🎯</h2>
 
-      {/* Progress bar with milestones */}
-      <div style={{ position: 'relative', marginBottom: '32px' }}>
-        <div style={{ height: '6px', background: 'var(--border)', borderRadius: '3px', overflow: 'visible', position: 'relative' }}>
-          <div style={{
-            height: '100%', width: `${progress}%`,
-            background: 'linear-gradient(90deg, var(--green), var(--yellow))',
-            borderRadius: '3px', transition: 'width 1s ease',
-          }} />
+      {/* Progress bar */}
+      <div style={{ marginBottom: '32px' }}>
+        <div style={{ height: '8px', background: 'var(--bg)', borderRadius: '4px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+          <div style={{ height: '100%', width: `${progress}%`, background: 'linear-gradient(90deg, var(--green), #27ae60)', borderRadius: '4px', transition: 'width 1s ease' }} />
         </div>
-        {/* Milestone markers */}
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
           {milestones.map((m, i) => {
-            const pos = (m.day / 180) * 100;
             const reached = daysOnProgram >= m.day;
             return (
               <div key={i} style={{ textAlign: 'center', flex: 1 }}>
-                <div style={{
-                  width: '8px', height: '8px', borderRadius: '50%',
-                  background: reached ? 'var(--green)' : 'var(--border)',
-                  margin: '0 auto 4px',
-                  boxShadow: reached ? '0 0 8px var(--green)' : 'none',
-                }} />
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '8px', color: reached ? 'var(--green)' : 'var(--muted)', letterSpacing: '1px' }}>
-                  {m.label}
-                </div>
+                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: reached ? 'var(--green)' : 'var(--border2)', margin: '0 auto 4px', border: reached ? '2px solid var(--green)' : '2px solid var(--border2)' }} />
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '8px', color: reached ? 'var(--green)' : 'var(--muted)', letterSpacing: '0.5px' }}>{m.label}</div>
               </div>
             );
           })}
@@ -57,31 +35,22 @@ export default function ProgressInsight({ insight, daysOnProgram, weekNumber }) 
       </div>
 
       {insight && (
-        <div style={{
-          background: 'var(--card2)', borderRadius: '10px', padding: '16px',
-          border: '1px solid var(--border)',
-        }}>
-          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--accent)', letterSpacing: '2px', marginBottom: '8px' }}>
-            AI COACH INSIGHT
-          </div>
-          <p style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: 1.7 }}>{insight}</p>
+        <div style={{ background: 'var(--bg)', borderRadius: '10px', padding: '16px', border: '1px solid var(--border)', marginBottom: '16px' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--accent)', letterSpacing: '1px', marginBottom: '8px' }}>AI COACH INSIGHT</div>
+          <p style={{ fontSize: '14px', color: 'var(--text)', lineHeight: 1.7 }}>{insight}</p>
         </div>
       )}
 
-      <div style={{ marginTop: '16px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '10px' }}>
         {[
           { label: 'Current Weight', value: '70 kg', icon: '⚖️' },
           { label: 'Target', value: '~62 kg', icon: '🎯' },
-          { label: 'To Lose', value: '~8 kg fat', icon: '🔥' },
-          { label: 'Est. Timeline', value: '4-6 months', icon: '📅' },
+          { label: 'To Lose', value: '~8 kg', icon: '🔥' },
+          { label: 'Est. Timeline', value: '4–6 months', icon: '📅' },
         ].map(s => (
-          <div key={s.label} style={{
-            flex: '1', minWidth: '120px',
-            background: 'var(--card2)', border: '1px solid var(--border)',
-            borderRadius: '10px', padding: '12px', textAlign: 'center',
-          }}>
+          <div key={s.label} style={{ background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '10px', padding: '12px', textAlign: 'center' }}>
             <div style={{ fontSize: '18px', marginBottom: '4px' }}>{s.icon}</div>
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--text)', fontWeight: '700' }}>{s.value}</div>
+            <div style={{ fontWeight: '600', fontSize: '13px', color: 'var(--text)' }}>{s.value}</div>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--muted)', marginTop: '2px' }}>{s.label}</div>
           </div>
         ))}
