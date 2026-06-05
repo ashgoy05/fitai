@@ -7,16 +7,41 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const WHOOP_CLIENT_ID     = '5481da9c-04ff-4227-be33-a72b148f2098';
 const WHOOP_CLIENT_SECRET = process.env.WHOOP_CLIENT_SECRET;
-const WHOOP_REFRESH_TOKEN = process.env.WHOOP_REFRESH_TOKEN;
 const ANTHROPIC_API_KEY   = process.env.ANTHROPIC_API_KEY;
 const WHOOP_BASE          = 'https://api.prod.whoop.com/developer/v2';
 
-// ─── Step 1: Get access token ─────────────────────────────────────────────────
-async function refreshAccessToken() {
+const TOKENS_PATH = path.join(__dirname, '../src/data/tokens.json');
+
+// ─── Load refresh token from file ────────────────────────────────────────────
+function loadRefreshToken() {
+  try {
+    const data = JSON.parse(fs.readFileSync(TOKENS_PATH, 'utf8'));
+    console.log('Loaded refresh token from tokens.json');
+    return data.refresh_token;
+  } catch {
+    // Fall back to env variable (first run)
+    const envToken = process.env.WHOOP_REFRESH_TOKEN;
+    if (envToken) {
+      console.log('Using refresh token from env secret (first run)');
+      return envToken;
+    }
+    throw new Error('No refresh token found in tokens.json or WHOOP_REFRESH_TOKEN secret');
+  }
+}
+
+// ─── Save new refresh token to file in repo ───────────────────────────────────
+function saveRefreshToken(refreshToken) {
+  fs.mkdirSync(path.dirname(TOKENS_PATH), { recursive: true });
+  fs.writeFileSync(TOKENS_PATH, JSON.stringify({ refresh_token: refreshToken, updated_at: new Date().toISOString() }, null, 2));
+  console.log('✅ Saved new refresh token to tokens.json');
+}
+
+// ─── Step 1: Get access token using refresh token ────────────────────────────
+async function refreshAccessToken(refreshToken) {
   console.log('Getting access token...');
   const body = new URLSearchParams();
   body.append('grant_type',    'refresh_token');
-  body.append('refresh_token', WHOOP_REFRESH_TOKEN);
+  body.append('refresh_token', refreshToken);
   body.append('client_id',     WHOOP_CLIENT_ID);
   body.append('client_secret', WHOOP_CLIENT_SECRET);
   body.append('scope',         'offline');
@@ -31,10 +56,10 @@ async function refreshAccessToken() {
   if (!res.ok) throw new Error(`Token failed ${res.status}: ${text}`);
   const data = JSON.parse(text);
   console.log('✅ Got access token');
-  return data.access_token;
+  return { accessToken: data.access_token, newRefreshToken: data.refresh_token };
 }
 
-// ─── Step 2: WHOOP API calls with Bearer token ────────────────────────────────
+// ─── Step 2: WHOOP API calls ──────────────────────────────────────────────────
 function whoopGet(accessToken) {
   return async (endpoint) => {
     const res = await fetch(`${WHOOP_BASE}${endpoint}`, {
@@ -66,7 +91,7 @@ function computeAnalytics(history) {
   const last7  = history.slice(-7);
   const last30 = history.slice(-30);
   return {
-    week:  {
+    week: {
       avg_recovery: avg(last7, 'recovery_score'),
       avg_hrv: avg(last7, 'hrv'),
       avg_sleep: avg(last7, 'sleep_hours'),
@@ -110,8 +135,7 @@ WEEKLY: Recovery ${analytics.week.avg_recovery}%, HRV ${analytics.week.avg_hrv}m
 MONTHLY: Recovery ${analytics.month.avg_recovery}%, Workouts ${analytics.month.total_workouts}
 Days on program: ${analytics.days_on_program}
 
-Return ONLY a valid JSON object. No markdown, no explanation, no extra text before or after. Start with { and end with }.
-
+Return ONLY a valid JSON object. No markdown, no explanation. Start with { end with }:
 {
   "date": "${today}",
   "recovery_score": ${r?.recovery_score ?? null},
@@ -123,19 +147,23 @@ Return ONLY a valid JSON object. No markdown, no explanation, no extra text befo
   "calories_burned": ${c?.kilojoule ? (c.kilojoule/4.184).toFixed(0) : null},
   "recovery_trend": ${JSON.stringify(analytics.week.trend)},
   "daily_status": "Green",
-  "status_message": "motivational sentence",
-  "weekly_insight": "weekly trend analysis",
-  "monthly_insight": "monthly progress toward six-pack",
+  "status_message": "motivational sentence based on WHOOP data",
+  "weekly_insight": "2-3 sentences analyzing weekly trend",
+  "monthly_insight": "2-3 sentences on monthly progress toward six-pack",
   "workout": {
     "recommended": true,
-    "type": "Upper Body Strength",
+    "type": "e.g. Upper Body Strength",
     "duration_minutes": 45,
     "intensity": "Medium",
-    "rationale": "why this workout",
-    "warmup": "warmup description",
-    "cooldown": "cooldown description",
+    "rationale": "why this workout based on recovery data",
+    "warmup": "5 min warmup description",
+    "cooldown": "5 min cooldown description",
     "exercises": [
-      { "name": "Push-ups", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "form tip", "youtube_search": "push ups proper form beginner" }
+      { "name": "Exercise name", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "key form tip", "youtube_search": "exercise name proper form beginner" },
+      { "name": "Exercise name", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "key form tip", "youtube_search": "exercise name proper form beginner" },
+      { "name": "Exercise name", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "key form tip", "youtube_search": "exercise name proper form beginner" },
+      { "name": "Exercise name", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "key form tip", "youtube_search": "exercise name proper form beginner" },
+      { "name": "Exercise name", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "key form tip", "youtube_search": "exercise name proper form beginner" }
     ]
   },
   "meal_plan": {
@@ -144,15 +172,19 @@ Return ONLY a valid JSON object. No markdown, no explanation, no extra text befo
     "carbs_g": 160,
     "fat_g": 60,
     "meals": [
-      { "time": "7:00 AM",  "name": "Breakfast",    "description": "Overnight oats + milk, Activia yogurt, fruit", "calories": 450, "protein_g": 25 },
-      { "time": "10:30 AM", "name": "Snack",         "description": "2 boiled eggs + apple", "calories": 200, "protein_g": 15 },
-      { "time": "1:00 PM",  "name": "Lunch",         "description": "chicken curry + rice + salad", "calories": 550, "protein_g": 40 },
-      { "time": "4:00 PM",  "name": "Pre-workout",   "description": "banana + peanut butter", "calories": 200, "protein_g": 10 },
-      { "time": "7:30 PM",  "name": "Dinner",        "description": "grilled fish + vegetables", "calories": 500, "protein_g": 45 }
+      { "time": "7:00 AM",  "name": "Breakfast",   "description": "Overnight oats (50g) + 200ml milk, Activia yogurt (125g), mixed berries (100g)", "calories": 450, "protein_g": 25 },
+      { "time": "10:30 AM", "name": "Snack",        "description": "specific snack with quantities", "calories": 200, "protein_g": 15 },
+      { "time": "1:00 PM",  "name": "Lunch",        "description": "specific non-veg lunch with quantities", "calories": 550, "protein_g": 40 },
+      { "time": "4:00 PM",  "name": "Pre-workout",  "description": "specific pre-workout snack", "calories": 200, "protein_g": 10 },
+      { "time": "7:30 PM",  "name": "Dinner",       "description": "specific non-veg dinner with quantities", "calories": 500, "protein_g": 45 }
     ]
   },
-  "daily_tips": ["tip 1", "tip 2", "tip 3"],
-  "progress_insight": "detailed six-pack progress paragraph",
+  "daily_tips": [
+    "specific tip based on today recovery score",
+    "specific tip based on weekly sleep trend",
+    "specific tip for six-pack progress"
+  ],
+  "progress_insight": "detailed 3-4 sentence paragraph on six-pack progress using all available data",
   "week_number": ${Math.ceil(analytics.days_on_program / 7) || 1},
   "days_on_program": ${analytics.days_on_program}
 }`;
@@ -173,12 +205,10 @@ Return ONLY a valid JSON object. No markdown, no explanation, no extra text befo
 
   const json = await res.json();
   console.log('Claude API status:', res.status);
-
   if (!res.ok) throw new Error(`Claude API failed: ${JSON.stringify(json)}`);
 
   const text = json.content?.[0]?.text;
-  if (!text) throw new Error(`Empty response from Claude: ${JSON.stringify(json)}`);
-
+  if (!text) throw new Error(`Empty Claude response: ${JSON.stringify(json)}`);
   console.log('Claude response length:', text.length);
 
   const clean = text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
@@ -188,8 +218,16 @@ Return ONLY a valid JSON object. No markdown, no explanation, no extra text befo
 // ─── Main ─────────────────────────────────────────────────────────────────────
 async function main() {
   try {
-    const accessToken = await refreshAccessToken();
+    // 1. Load refresh token (from file or env secret on first run)
+    const refreshToken = loadRefreshToken();
 
+    // 2. Exchange for access token + new refresh token
+    const { accessToken, newRefreshToken } = await refreshAccessToken(refreshToken);
+
+    // 3. Save new refresh token to repo file (auto-committed by workflow)
+    saveRefreshToken(newRefreshToken);
+
+    // 4. Fetch WHOOP data
     const get = whoopGet(accessToken);
     const [recoveryData, sleepData, cycleData, workoutData] = await Promise.all([
       get('/recovery?limit=7'),
@@ -206,6 +244,7 @@ async function main() {
     };
     console.log('✅ WHOOP data fetched');
 
+    // 5. Update history
     const history = loadHistory();
     const today = new Date().toISOString().split('T')[0];
     const entry = {
@@ -222,9 +261,13 @@ async function main() {
     if (idx >= 0) history[idx] = entry; else history.push(entry);
     saveHistory(history);
 
+    // 6. Compute analytics
     const analytics = computeAnalytics(history);
+
+    // 7. Generate AI plan
     const plan = await generateAIPlan(whoopData, analytics);
 
+    // 8. Add YouTube links
     if (plan.workout?.exercises) {
       plan.workout.exercises = plan.workout.exercises.map(ex => ({
         ...ex,
@@ -232,6 +275,7 @@ async function main() {
       }));
     }
 
+    // 9. Save daily plan
     const out = path.join(__dirname, '../src/data/daily-plan.json');
     fs.mkdirSync(path.dirname(out), { recursive: true });
     fs.writeFileSync(out, JSON.stringify(plan, null, 2));
