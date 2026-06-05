@@ -14,62 +14,62 @@
     }
   ],
   "daily_status": "Yellow",
-  "status_message": "Your recovery is moderate—today is perfect for a focused strength session after 6pm to build that six-pack foundation!",
-  "weekly_insight": "Week 1 baseline established. No workouts logged yet. Starting fresh with excellent gym availability: target 4 sessions this week (Mon/Tue/Wed/Thu).",
-  "monthly_insight": "You're on Day 1 of your six-pack journey. Consistency over the next 4 weeks will build momentum. Focus on progressive overload and maintaining your 1800 calorie target to reveal definition.",
+  "status_message": "Your recovery is moderate—you're ready for a controlled workout today. Focus on consistency over intensity as you build your foundation.",
+  "weekly_insight": "Day 1 establishes your baseline. Your 56% recovery score indicates adequate restoration capacity despite missing sleep data. Prioritize sleep quality this week to optimize your fat-loss and six-pack goals.",
+  "monthly_insight": "You're starting your transformation journey with solid recovery metrics. Maintaining consistent training frequency (Mon/Wed/Fri evening + Tue/Thu office gym) combined with disciplined nutrition will accelerate abdominal definition within 8-12 weeks.",
   "workout": {
     "recommended": true,
-    "type": "Core + Upper Body Strength",
-    "duration_minutes": 50,
+    "type": "Full Body Foundation",
+    "duration_minutes": 45,
     "intensity": "Medium",
-    "rationale": "After 6pm gym slot available. Moderate recovery allows controlled strength work. Prioritize core and upper body to build six-pack muscles while maintaining fat loss deficit.",
-    "warmup": "5 min light cardio + arm circles + cat-cow stretches",
-    "cooldown": "5 min walking + static stretches (chest, shoulders, core)",
+    "rationale": "56% recovery allows moderate training. A full-body approach maximizes calorie burn for fat loss and engages core throughout, supporting six-pack development.",
+    "warmup": "5 min: light cardio (brisk walking or jogging in place) + 10 arm circles + 10 bodyweight squats + 10 inchworms",
+    "cooldown": "5 min: walking + static stretching (quads, hamstrings, chest, shoulders, 30 sec each)",
     "exercises": [
       {
-        "name": "Dumbbell Bench Press",
-        "sets": 3,
-        "reps": "10-12",
-        "rest_seconds": 90,
-        "notes": "Control the descent, squeeze at top for 1 second",
-        "youtube_search": "dumbbell bench press proper form beginner",
-        "youtube_url": "https://www.youtube.com/results?search_query=dumbbell%20bench%20press%20proper%20form%20beginner"
-      },
-      {
-        "name": "Bent-Over Barbell Rows",
-        "sets": 3,
-        "reps": "10-12",
-        "rest_seconds": 90,
-        "notes": "Keep chest up, row to lower ribs",
-        "youtube_search": "bent over barbell rows proper form",
-        "youtube_url": "https://www.youtube.com/results?search_query=bent%20over%20barbell%20rows%20proper%20form"
-      },
-      {
-        "name": "Hanging Knee Raises",
-        "sets": 3,
-        "reps": "8-10",
-        "rest_seconds": 60,
-        "notes": "Control the swing, engage core at top",
-        "youtube_search": "hanging knee raises proper form",
-        "youtube_url": "https://www.youtube.com/results?search_query=hanging%20knee%20raises%20proper%20form"
-      },
-      {
-        "name": "Incline Dumbbell Flyes",
+        "name": "Goblet Squats",
         "sets": 3,
         "reps": "12-15",
         "rest_seconds": 60,
-        "notes": "Slight bend in elbows, chest stretch at bottom",
-        "youtube_search": "incline dumbbell flyes form",
-        "youtube_url": "https://www.youtube.com/results?search_query=incline%20dumbbell%20flyes%20form"
+        "notes": "Hold weight at chest, keep chest up, drive through heels, knees track over toes",
+        "youtube_search": "goblet squat proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=goblet%20squat%20proper%20form%20beginner"
       },
       {
-        "name": "Dead bugs",
+        "name": "Push-ups",
         "sets": 3,
-        "reps": "12 per side",
+        "reps": "8-12",
+        "rest_seconds": 60,
+        "notes": "Hands shoulder-width, core engaged, elbows at 45°, full range of motion",
+        "youtube_search": "push-up proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=push-up%20proper%20form%20beginner"
+      },
+      {
+        "name": "Bent-Over Dumbbell Rows",
+        "sets": 3,
+        "reps": "10-12",
+        "rest_seconds": 60,
+        "notes": "Slight knee bend, hinge hips, pull elbows back, squeeze shoulder blades",
+        "youtube_search": "bent over dumbbell rows proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=bent%20over%20dumbbell%20rows%20proper%20form%20beginner"
+      },
+      {
+        "name": "Dumbbell Deadlifts",
+        "sets": 3,
+        "reps": "10-12",
+        "rest_seconds": 75,
+        "notes": "Neutral spine, shoulder blades packed, drive through heels, controlled descent",
+        "youtube_search": "dumbbell deadlift proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=dumbbell%20deadlift%20proper%20form%20beginner"
+      },
+      {
+        "name": "Plank Hold",
+        "sets": 3,
+        "reps": "20-30 sec",
         "rest_seconds": 45,
-        "notes": "Move slowly, never let lower back lift off floor",
-        "youtube_search": "dead bugs core exercise form",
-        "youtube_url": "https://www.youtube.com/results?search_query=dead%20bugs%20core%20exercise%20form"
+        "notes": "Straight line head to heels, engage core, shoulders over wrists, no sagging hips",
+        "youtube_search": "plank hold proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=plank%20hold%20proper%20form%20beginner"
       }
     ]
   },
@@ -82,46 +82,46 @@
       {
         "time": "7:00 AM",
         "name": "Breakfast",
-        "description": "Overnight oats (50g oats) + 200ml milk, Activia yogurt (125g), mixed berries (100g)",
+        "description": "Overnight oats (50g dry oats) + 200ml whole milk, Activia yogurt (125g), mixed berries (100g blueberries/strawberries)",
         "calories": 450,
-        "protein_g": 18
+        "protein_g": 25
       },
       {
         "time": "10:30 AM",
         "name": "Snack",
-        "description": "2 boiled eggs + 1 medium apple",
-        "calories": 220,
-        "protein_g": 13
+        "description": "Boiled eggs (2 large) + 1 medium banana + almonds (20g)",
+        "calories": 200,
+        "protein_g": 15
       },
       {
         "time": "1:00 PM",
         "name": "Lunch",
-        "description": "Grilled chicken breast (150g) + basmati rice (60g) + cucumber & tomato salad with olive oil",
+        "description": "Grilled chicken breast (150g) + basmati rice (80g cooked) + mixed vegetables (broccoli/carrots 150g) + 1 tsp olive oil",
         "calories": 550,
-        "protein_g": 42
+        "protein_g": 40
       },
       {
         "time": "4:30 PM",
         "name": "Pre-workout",
-        "description": "1 banana + 1 tbsp peanut butter",
-        "calories": 220,
-        "protein_g": 8
+        "description": "Greek yogurt (150g) + honey (1 tbsp) + granola (30g)",
+        "calories": 200,
+        "protein_g": 10
       },
       {
-        "time": "8:00 PM",
+        "time": "7:30 PM",
         "name": "Dinner",
-        "description": "Pan-seared salmon (160g) + roasted broccoli & carrots (200g) + sweet potato (100g)",
-        "calories": 490,
-        "protein_g": 38
+        "description": "Lean ground beef (150g) + sweet potato (150g baked) + spinach salad (100g) + 1 tsp olive oil dressing",
+        "calories": 500,
+        "protein_g": 45
       }
     ]
   },
   "daily_tips": [
-    "Drink 3-4 liters of water today—hydration improves recovery and reduces bloating for visible abs",
-    "Your resting HR of 76 is good; focus on steady sleep tonight to boost tomorrow's recovery score above 70%",
-    "Hit the after-6pm gym session: compound lifts + core work will maximize your calorie deficit without overtraining"
+    "Your 56% recovery is moderate—avoid high-intensity training. Medium intensity today supports fat loss without overextending recovery capacity.",
+    "Sleep performance at 81% is strong, but missing sleep hours data. Aim for 7-9 hours tonight to maximize tomorrow's recovery and HRV improvement.",
+    "Six-pack development requires consistent core engagement + progressive fat loss. Today's plank holds activate deep abdominal muscles; nutrition discipline burns the fat covering them."
   ],
-  "progress_insight": "You're starting strong with a structured non-veg diet and clear gym schedule. Your 1800 calorie target creates a 300-500 calorie daily deficit, ideal for fat loss. The six-pack requires 3 elements: progressive strength training (building the rectus abdominis and obliques), consistent calorie deficit (revealing the muscles), and core-focused work. At 70kg and 163cm, you're roughly 5-8kg away from visible abs if body fat drops to 12-14%. Your WHOOP data shows you're well-rested—capitalize this week with 4 focused workouts combining compound lifts and dedicated core. Consistency beats perfection; nail your meal plan and gym sessions Monday through Thursday this week.",
+  "progress_insight": "You're launching your six-pack journey with moderate recovery (56%) and a disciplined schedule. Your calorie burn of 1203 today is solid for a beginner, and hitting your 1800-calorie target with 140g protein will accelerate fat loss while preserving muscle definition. The consistent training frequency (4 sessions weekly) combined with controlled nutrition creates the optimal environment for visible abdominal definition within 10-12 weeks. Sleep quality is your leverage point—prioritize 7-9 hours nightly to amplify recovery and accelerate results.",
   "week_number": 1,
   "days_on_program": 1
 }
