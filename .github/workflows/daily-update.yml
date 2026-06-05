@@ -30,15 +30,13 @@ jobs:
           WHOOP_CLIENT_SECRET: ${{ secrets.WHOOP_CLIENT_SECRET }}
           WHOOP_REFRESH_TOKEN: ${{ secrets.WHOOP_REFRESH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
         run: node scripts/fetch-whoop.js
 
-      - name: Commit updated plan
+      - name: Commit updated files
         run: |
           git config --local user.email "fitai-bot@github.com"
           git config --local user.name "FitAI Bot"
-          git add src/data/daily-plan.json src/data/history.json
+          git add src/data/daily-plan.json src/data/history.json src/data/tokens.json
           git diff --staged --quiet || git commit -m "🤖 Daily FitAI update $(date +'%Y-%m-%d')"
           git push
 
