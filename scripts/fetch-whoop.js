@@ -7,60 +7,20 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ─── Credentials ─────────────────────────────────────────────────────────────
 const WHOOP_CLIENT_ID = '5481da9c-04ff-4227-be33-a72b148f2098';
-
 const WHOOP_CLIENT_SECRET = process.env.WHOOP_CLIENT_SECRET;
 const WHOOP_REFRESH_TOKEN = process.env.WHOOP_REFRESH_TOKEN;
-
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
-
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY;
-
 const WHOOP_BASE = 'https://api.prod.whoop.com/developer/v1';
 
-
-// ─── Validate Secrets ────────────────────────────────────────────────────────
-function validateSecrets() {
-
-  console.log('Checking environment variables...');
-
-  if (!WHOOP_CLIENT_SECRET) {
-    throw new Error(
-      '❌ WHOOP_CLIENT_SECRET missing. Add it in GitHub Actions Secrets.'
-    );
-  }
-
-  if (!WHOOP_REFRESH_TOKEN) {
-    throw new Error(
-      '❌ WHOOP_REFRESH_TOKEN missing. Add it in GitHub Actions Secrets.'
-    );
-  }
-
-  if (!ANTHROPIC_API_KEY) {
-    throw new Error(
-      '❌ ANTHROPIC_API_KEY missing. Add it in GitHub Actions Secrets.'
-    );
-  }
-
-  console.log('✅ All secrets loaded successfully');
-  console.log('WHOOP Client Secret length:', WHOOP_CLIENT_SECRET.length);
-  console.log('WHOOP Refresh Token length:', WHOOP_REFRESH_TOKEN.length);
-}
-
-
-// Run validation before API calls
-validateSecrets();
-
-
-// ─── User Profile ────────────────────────────────────────────────────────────
 const USER_PROFILE = {
   name: 'Ash',
   height_cm: 163,
   weight_kg: 70,
   goal: 'Fat loss, build six-pack, get lean and attractive',
   diet: 'Non-vegetarian',
-  gym_schedule:
-    'Tue & Thu at office gym (7am-5pm), Mon/Wed/Fri gym after 6pm, Sat/Sun free',
+  gym_schedule: 'Tue & Thu at office gym (7am-5pm), Mon/Wed/Fri gym after 6pm, Sat/Sun free',
   fitness_level: 'Complete beginner',
   breakfast: 'Overnight oats + milk every morning',
   must_haves: 'Activia yogurt and fruit daily',
