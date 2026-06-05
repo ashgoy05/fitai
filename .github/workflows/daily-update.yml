@@ -2,8 +2,8 @@ name: Daily FitAI Update
 
 on:
   schedule:
-    - cron: '0 1 * * *'  # 1 AM UTC = ~6 AM IST
-  workflow_dispatch:       # Allow manual trigger
+    - cron: '0 1 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -11,6 +11,8 @@ permissions:
 jobs:
   update-plan:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -25,15 +27,18 @@ jobs:
 
       - name: Fetch WHOOP data & generate AI plan
         env:
-          WHOOP_TOKEN: ${{ secrets.WHOOP_TOKEN }}
+          WHOOP_CLIENT_SECRET: ${{ secrets.WHOOP_CLIENT_SECRET }}
+          WHOOP_REFRESH_TOKEN: ${{ secrets.WHOOP_REFRESH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: node scripts/fetch-whoop.js
 
       - name: Commit updated plan
         run: |
           git config --local user.email "fitai-bot@github.com"
           git config --local user.name "FitAI Bot"
-          git add src/data/daily-plan.json
+          git add src/data/daily-plan.json src/data/history.json
           git diff --staged --quiet || git commit -m "🤖 Daily FitAI update $(date +'%Y-%m-%d')"
           git push
 
