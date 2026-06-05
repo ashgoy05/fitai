@@ -1,0 +1,76 @@
+name: Daily FitAI Update
+
+on:
+  schedule:
+    - cron: '0 1 * * *'  # 1 AM UTC = ~6 AM IST
+  workflow_dispatch:       # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-plan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch WHOOP data & generate AI plan
+        env:
+          WHOOP_TOKEN: ${{ secrets.WHOOP_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/fetch-whoop.js
+
+      - name: Commit updated plan
+        run: |
+          git config --local user.email "fitai-bot@github.com"
+          git config --local user.name "FitAI Bot"
+          git add src/data/daily-plan.json
+          git diff --staged --quiet || git commit -m "🤖 Daily FitAI update $(date +'%Y-%m-%d')"
+          git push
+
+  deploy:
+    needs: update-plan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install & Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
