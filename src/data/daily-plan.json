@@ -1,30 +1,77 @@
 {
-  "date": "Waiting for first sync...",
-  "recovery_score": null,
-  "hrv": null,
-  "resting_hr": null,
-  "sleep_performance": null,
+  "date": "Friday, June 5, 2026",
+  "recovery_score": 56,
+  "hrv": 36.1527,
+  "resting_hr": 76,
   "sleep_hours": null,
-  "strain": null,
-  "calories_burned": null,
-  "recovery_trend": [],
-  "daily_status": "Green",
-  "status_message": "Welcome to FitAI! Your first WHOOP sync will happen tonight at 6 AM IST.",
+  "sleep_performance": 81,
+  "strain": 6.276545,
+  "calories_burned": 1203,
+  "recovery_trend": [
+    {
+      "date": "2026-06-05",
+      "score": 56
+    }
+  ],
+  "daily_status": "Yellow",
+  "status_message": "Your recovery is moderate—today is perfect for a focused strength session after 6pm to build that six-pack foundation!",
+  "weekly_insight": "Week 1 baseline established. No workouts logged yet. Starting fresh with excellent gym availability: target 4 sessions this week (Mon/Tue/Wed/Thu).",
+  "monthly_insight": "You're on Day 1 of your six-pack journey. Consistency over the next 4 weeks will build momentum. Focus on progressive overload and maintaining your 1800 calorie target to reveal definition.",
   "workout": {
     "recommended": true,
-    "type": "Full Body Introduction",
-    "duration_minutes": 30,
-    "intensity": "Low",
+    "type": "Core + Upper Body Strength",
+    "duration_minutes": 50,
+    "intensity": "Medium",
+    "rationale": "After 6pm gym slot available. Moderate recovery allows controlled strength work. Prioritize core and upper body to build six-pack muscles while maintaining fat loss deficit.",
+    "warmup": "5 min light cardio + arm circles + cat-cow stretches",
+    "cooldown": "5 min walking + static stretches (chest, shoulders, core)",
     "exercises": [
-      { "name": "Bodyweight Squat", "sets": 3, "reps": "12", "rest_seconds": 60, "notes": "Keep chest up, knees over toes" },
-      { "name": "Push-ups (Knee if needed)", "sets": 3, "reps": "8-10", "rest_seconds": 60, "notes": "Full body straight as a plank" },
-      { "name": "Plank Hold", "sets": 3, "reps": "20 seconds", "rest_seconds": 45, "notes": "Core tight, breathe normally" },
-      { "name": "Dumbbell Row", "sets": 3, "reps": "10 each side", "rest_seconds": 60, "notes": "Pull elbow to hip" },
-      { "name": "Glute Bridge", "sets": 3, "reps": "15", "rest_seconds": 45, "notes": "Squeeze glutes at top" }
-    ],
-    "warmup": "5 minutes light cardio (treadmill walk or jumping jacks). Arm circles, hip rotations, leg swings — 10 reps each.",
-    "cooldown": "5 minutes slow walking. Stretch quads, hamstrings, chest, and shoulders — 30 seconds each side.",
-    "rationale": "Starting with a full-body introduction to build movement patterns and assess your current fitness level."
+      {
+        "name": "Dumbbell Bench Press",
+        "sets": 3,
+        "reps": "10-12",
+        "rest_seconds": 90,
+        "notes": "Control the descent, squeeze at top for 1 second",
+        "youtube_search": "dumbbell bench press proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=dumbbell%20bench%20press%20proper%20form%20beginner"
+      },
+      {
+        "name": "Bent-Over Barbell Rows",
+        "sets": 3,
+        "reps": "10-12",
+        "rest_seconds": 90,
+        "notes": "Keep chest up, row to lower ribs",
+        "youtube_search": "bent over barbell rows proper form",
+        "youtube_url": "https://www.youtube.com/results?search_query=bent%20over%20barbell%20rows%20proper%20form"
+      },
+      {
+        "name": "Hanging Knee Raises",
+        "sets": 3,
+        "reps": "8-10",
+        "rest_seconds": 60,
+        "notes": "Control the swing, engage core at top",
+        "youtube_search": "hanging knee raises proper form",
+        "youtube_url": "https://www.youtube.com/results?search_query=hanging%20knee%20raises%20proper%20form"
+      },
+      {
+        "name": "Incline Dumbbell Flyes",
+        "sets": 3,
+        "reps": "12-15",
+        "rest_seconds": 60,
+        "notes": "Slight bend in elbows, chest stretch at bottom",
+        "youtube_search": "incline dumbbell flyes form",
+        "youtube_url": "https://www.youtube.com/results?search_query=incline%20dumbbell%20flyes%20form"
+      },
+      {
+        "name": "Dead bugs",
+        "sets": 3,
+        "reps": "12 per side",
+        "rest_seconds": 45,
+        "notes": "Move slowly, never let lower back lift off floor",
+        "youtube_search": "dead bugs core exercise form",
+        "youtube_url": "https://www.youtube.com/results?search_query=dead%20bugs%20core%20exercise%20form"
+      }
+    ]
   },
   "meal_plan": {
     "total_calories_target": 1800,
@@ -32,19 +79,49 @@
     "carbs_g": 160,
     "fat_g": 60,
     "meals": [
-      { "time": "7:00 AM", "name": "Breakfast", "description": "Overnight oats with milk, Activia yogurt, 1 banana or seasonal fruit", "calories": 450, "protein_g": 25 },
-      { "time": "10:30 AM", "name": "Mid-morning snack", "description": "2 boiled eggs + 1 apple", "calories": 220, "protein_g": 14 },
-      { "time": "1:00 PM", "name": "Lunch", "description": "2 rotis + chicken curry (150g) + dal + salad", "calories": 560, "protein_g": 42 },
-      { "time": "4:00 PM", "name": "Pre-workout", "description": "Banana + 1 tbsp peanut butter", "calories": 190, "protein_g": 5 },
-      { "time": "7:30 PM", "name": "Dinner", "description": "Grilled fish/chicken (200g) + sautéed vegetables + 1 cup rice", "calories": 500, "protein_g": 48 }
+      {
+        "time": "7:00 AM",
+        "name": "Breakfast",
+        "description": "Overnight oats (50g oats) + 200ml milk, Activia yogurt (125g), mixed berries (100g)",
+        "calories": 450,
+        "protein_g": 18
+      },
+      {
+        "time": "10:30 AM",
+        "name": "Snack",
+        "description": "2 boiled eggs + 1 medium apple",
+        "calories": 220,
+        "protein_g": 13
+      },
+      {
+        "time": "1:00 PM",
+        "name": "Lunch",
+        "description": "Grilled chicken breast (150g) + basmati rice (60g) + cucumber & tomato salad with olive oil",
+        "calories": 550,
+        "protein_g": 42
+      },
+      {
+        "time": "4:30 PM",
+        "name": "Pre-workout",
+        "description": "1 banana + 1 tbsp peanut butter",
+        "calories": 220,
+        "protein_g": 8
+      },
+      {
+        "time": "8:00 PM",
+        "name": "Dinner",
+        "description": "Pan-seared salmon (160g) + roasted broccoli & carrots (200g) + sweet potato (100g)",
+        "calories": 490,
+        "protein_g": 38
+      }
     ]
   },
   "daily_tips": [
-    "Drink 3-4 liters of water daily — hydration is critical for fat loss",
-    "Get 7-8 hours of sleep. Your WHOOP will track this and adjust tomorrow's plan",
-    "Take progress photos every Sunday morning — visual change takes 4-6 weeks to appear"
+    "Drink 3-4 liters of water today—hydration improves recovery and reduces bloating for visible abs",
+    "Your resting HR of 76 is good; focus on steady sleep tonight to boost tomorrow's recovery score above 70%",
+    "Hit the after-6pm gym session: compound lifts + core work will maximize your calorie deficit without overtraining"
   ],
-  "progress_insight": "Welcome to your six-pack journey! At 70kg and 5'4\", you're starting a transformation that is absolutely achievable. The key is consistency over intensity — trust the process, let WHOOP guide your recovery, and FitAI will adapt your plan daily.",
+  "progress_insight": "You're starting strong with a structured non-veg diet and clear gym schedule. Your 1800 calorie target creates a 300-500 calorie daily deficit, ideal for fat loss. The six-pack requires 3 elements: progressive strength training (building the rectus abdominis and obliques), consistent calorie deficit (revealing the muscles), and core-focused work. At 70kg and 163cm, you're roughly 5-8kg away from visible abs if body fat drops to 12-14%. Your WHOOP data shows you're well-rested—capitalize this week with 4 focused workouts combining compound lifts and dedicated core. Consistency beats perfection; nail your meal plan and gym sessions Monday through Thursday this week.",
   "week_number": 1,
-  "days_on_program": 0
+  "days_on_program": 1
 }
