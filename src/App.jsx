@@ -7,33 +7,35 @@ import MealPlan from './components/MealPlan.jsx';
 import RecoveryTrend from './components/RecoveryTrend.jsx';
 import DailyTips from './components/DailyTips.jsx';
 import ProgressInsight from './components/ProgressInsight.jsx';
+import StatsTab from './components/StatsTab.jsx';
+import historyData from './data/history.json';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('today');
   const plan = planData;
+  const history = historyData || [];
 
   const tabs = [
-    { id: 'today', label: "Today's Plan" },
-    { id: 'workout', label: 'Workout' },
+    { id: 'today',     label: "Today's Plan" },
+    { id: 'workout',   label: 'Workout' },
     { id: 'nutrition', label: 'Nutrition' },
-    { id: 'trends', label: 'Trends' },
+    { id: 'stats',     label: '📊 Stats' },
+    { id: 'trends',    label: 'Trends' },
   ];
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 20px 60px' }}>
         <Header plan={plan} />
-
-        {/* Nav */}
         <div style={{
           display: 'flex', gap: '4px', marginBottom: '32px',
           background: 'var(--card)', borderRadius: '12px', padding: '4px',
           border: '1px solid var(--border)', width: 'fit-content',
-          boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+          boxShadow: '0 1px 3px rgba(0,0,0,0.06)', flexWrap: 'wrap',
         }}>
           {tabs.map(tab => (
             <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{
-              padding: '9px 20px', borderRadius: '8px', border: 'none',
+              padding: '9px 18px', borderRadius: '8px', border: 'none',
               cursor: 'pointer', fontFamily: 'var(--font-body)', fontSize: '13px',
               fontWeight: '500', transition: 'all 0.2s',
               background: activeTab === tab.id ? 'var(--accent)' : 'transparent',
@@ -55,9 +57,10 @@ export default function App() {
             <ProgressInsight insight={plan.progress_insight} daysOnProgram={plan.days_on_program} weekNumber={plan.week_number} />
           </div>
         )}
-        {activeTab === 'workout' && <WorkoutPlan workout={plan.workout} compact={false} />}
+        {activeTab === 'workout'   && <WorkoutPlan workout={plan.workout} compact={false} />}
         {activeTab === 'nutrition' && <MealPlan mealPlan={plan.meal_plan} compact={false} />}
-        {activeTab === 'trends' && <RecoveryTrend trend={plan.recovery_trend} plan={plan} />}
+        {activeTab === 'stats'     && <StatsTab history={history} plan={plan} />}
+        {activeTab === 'trends'    && <RecoveryTrend trend={plan.recovery_trend} plan={plan} />}
       </div>
     </div>
   );
