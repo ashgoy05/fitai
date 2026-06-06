@@ -5,67 +5,100 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const WHOOP_CLIENT_ID     = '5481da9c-04ff-4227-be33-a72b148f2098';
+// ─── Credentials ─────────────────────────────────────────────────────────────
+const WHOOP_CLIENT_ID = '5481da9c-04ff-4227-be33-a72b148f2098';
 const WHOOP_CLIENT_SECRET = process.env.WHOOP_CLIENT_SECRET;
-const ANTHROPIC_API_KEY   = process.env.ANTHROPIC_API_KEY;
-const WHOOP_BASE          = 'https://api.prod.whoop.com/developer/v2';
+const WHOOP_REFRESH_TOKEN = process.env.WHOOP_REFRESH_TOKEN;
+const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY;
+const WHOOP_BASE = 'https://api.prod.whoop.com/developer/v1';
 
-const TOKENS_PATH = path.join(__dirname, '../src/data/tokens.json');
+const USER_PROFILE = {
+  name: 'Ash',
+  height_cm: 163,
+  weight_kg: 70,
+  goal: 'Fat loss, build six-pack, get lean and attractive',
+  diet: 'Non-vegetarian',
+  gym_schedule: 'Tue & Thu at office gym (7am-5pm), Mon/Wed/Fri gym after 6pm, Sat/Sun free',
+  fitness_level: 'Complete beginner',
+  breakfast: 'Overnight oats + milk every morning',
+  must_haves: 'Activia yogurt and fruit daily',
+};
 
-// ─── Load refresh token from file ────────────────────────────────────────────
-function loadRefreshToken() {
-  try {
-    const data = JSON.parse(fs.readFileSync(TOKENS_PATH, 'utf8'));
-    console.log('Loaded refresh token from tokens.json');
-    return data.refresh_token;
-  } catch {
-    // Fall back to env variable (first run)
-    const envToken = process.env.WHOOP_REFRESH_TOKEN;
-    if (envToken) {
-      console.log('Using refresh token from env secret (first run)');
-      return envToken;
-    }
-    throw new Error('No refresh token found in tokens.json or WHOOP_REFRESH_TOKEN secret');
-  }
-}
+// ─── OAuth refresh ────────────────────────────────────────────────────────────
+async function refreshAccessToken() {
+  console.log('Refreshing WHOOP access token...');
+  console.log('Client ID:', WHOOP_CLIENT_ID);
+  console.log('Client Secret length:', WHOOP_CLIENT_SECRET?.length);
+  console.log('Refresh Token length:', WHOOP_REFRESH_TOKEN?.length);
 
-// ─── Save new refresh token to file in repo ───────────────────────────────────
-function saveRefreshToken(refreshToken) {
-  fs.mkdirSync(path.dirname(TOKENS_PATH), { recursive: true });
-  fs.writeFileSync(TOKENS_PATH, JSON.stringify({ refresh_token: refreshToken, updated_at: new Date().toISOString() }, null, 2));
-  console.log('✅ Saved new refresh token to tokens.json');
-}
+  const params = new URLSearchParams();
+  params.append('grant_type', 'refresh_token');
+  params.append('refresh_token', WHOOP_REFRESH_TOKEN);
+  params.append('client_id', WHOOP_CLIENT_ID);
+  params.append('client_secret', WHOOP_CLIENT_SECRET);
+  params.append('scope', 'offline read:recovery read:cycles read:workout read:sleep read:profile read:body_measurement');
 
-// ─── Step 1: Get access token using refresh token ────────────────────────────
-async function refreshAccessToken(refreshToken) {
-  console.log('Getting access token...');
-  const body = new URLSearchParams();
-  body.append('grant_type',    'refresh_token');
-  body.append('refresh_token', refreshToken);
-  body.append('client_id',     WHOOP_CLIENT_ID);
-  body.append('client_secret', WHOOP_CLIENT_SECRET);
-  body.append('scope',         'offline');
+  console.log('Request body:', params.toString().replace(WHOOP_CLIENT_SECRET, '***').replace(WHOOP_REFRESH_TOKEN, '***'));
 
   const res = await fetch('https://api.prod.whoop.com/oauth/oauth2/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body,
+    body: params,
   });
+
   const text = await res.text();
-  console.log('Token status:', res.status);
-  if (!res.ok) throw new Error(`Token failed ${res.status}: ${text}`);
+  console.log('Response status:', res.status);
+  console.log('Response:', text.replace(WHOOP_CLIENT_SECRET, '***'));
+
+  if (!res.ok) {
+    throw new Error(`Token refresh failed ${res.status}: ${text}`);
+  }
+
   const data = JSON.parse(text);
-  console.log('✅ Got access token');
   return { accessToken: data.access_token, newRefreshToken: data.refresh_token };
 }
 
-// ─── Step 2: WHOOP API calls ──────────────────────────────────────────────────
-function whoopGet(accessToken) {
+// ─── Save new refresh token back to GitHub Secrets ────────────────────────────
+async function updateGitHubSecret(secretName, secretValue) {
+  try {
+    const [owner, repo] = GITHUB_REPOSITORY.split('/');
+    const keyRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/actions/secrets/public-key`, {
+      headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
+    });
+    const { key, key_id } = await keyRes.json();
+    const sodium = await import('libsodium-wrappers');
+    await sodium.ready;
+    const binKey = sodium.from_base64(key, sodium.base64_variants.ORIGINAL);
+    const binSecret = sodium.from_string(secretValue);
+    const encBytes = sodium.crypto_box_seal(binSecret, binKey);
+    const encryptedValue = sodium.to_base64(encBytes, sodium.base64_variants.ORIGINAL);
+    await fetch(`https://api.github.com/repos/${owner}/${repo}/actions/secrets/${secretName}`, {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${GITHUB_TOKEN}`,
+        'Content-Type': 'application/json',
+        'X-GitHub-Api-Version': '2022-11-28',
+      },
+      body: JSON.stringify({ encrypted_value: encryptedValue, key_id }),
+    });
+    console.log(`✅ Updated ${secretName} in GitHub Secrets`);
+  } catch (err) {
+    console.log(`⚠️ Could not update secret: ${err.message}`);
+  }
+}
+
+// ─── WHOOP API ────────────────────────────────────────────────────────────────
+function makeWhoopGet(accessToken) {
   return async (endpoint) => {
     const res = await fetch(`${WHOOP_BASE}${endpoint}`, {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
-    if (!res.ok) throw new Error(`WHOOP API ${res.status}: ${await res.text()}`);
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`WHOOP API error ${res.status}: ${text}`);
+    }
     return res.json();
   };
 }
@@ -73,7 +106,10 @@ function whoopGet(accessToken) {
 // ─── History ──────────────────────────────────────────────────────────────────
 function loadHistory() {
   const p = path.join(__dirname, '../src/data/history.json');
-  try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return []; }
+  if (fs.existsSync(p)) {
+    try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return []; }
+  }
+  return [];
 }
 
 function saveHistory(history) {
@@ -82,89 +118,141 @@ function saveHistory(history) {
   fs.writeFileSync(p, JSON.stringify(history.slice(-90), null, 2));
 }
 
+// ─── Fetch WHOOP data ─────────────────────────────────────────────────────────
+async function fetchWhoopData(accessToken) {
+  console.log('Fetching WHOOP data...');
+  const whoopGet = makeWhoopGet(accessToken);
+  const [recoveryData, sleepData, cycleData, workoutData] = await Promise.all([
+    whoopGet('/recovery?limit=7'),
+    whoopGet('/activity/sleep?limit=7'),
+    whoopGet('/cycle?limit=7'),
+    whoopGet('/activity/workout?limit=10'),
+  ]);
+  return {
+    latestRecovery: recoveryData.records?.[0] || null,
+    latestSleep: sleepData.records?.[0] || null,
+    latestCycle: cycleData.records?.[0] || null,
+    recentWorkouts: workoutData.records || [],
+    recoveryTrend: recoveryData.records || [],
+  };
+}
+
+// ─── History entry ────────────────────────────────────────────────────────────
+function buildHistoryEntry(whoopData) {
+  const today = new Date().toISOString().split('T')[0];
+  const r = whoopData.latestRecovery?.score;
+  const s = whoopData.latestSleep?.score;
+  const c = whoopData.latestCycle?.score;
+  return {
+    date: today,
+    recovery_score: r?.recovery_score ?? null,
+    hrv: r?.hrv_rmssd_milli ?? null,
+    resting_hr: r?.resting_heart_rate ?? null,
+    sleep_hours: s?.total_in_bed_time_milli ? +(s.total_in_bed_time_milli / 3600000).toFixed(1) : null,
+    sleep_performance: s?.sleep_performance_percentage ?? null,
+    strain: c?.strain ?? null,
+    calories: c?.kilojoule ? +(c.kilojoule / 4.184).toFixed(0) : null,
+    workout_count: whoopData.recentWorkouts.filter(w => w.start?.split('T')[0] === today).length,
+  };
+}
+
 // ─── Analytics ───────────────────────────────────────────────────────────────
 function computeAnalytics(history) {
+  const last7 = history.slice(-7);
+  const last30 = history.slice(-30);
   const avg = (arr, key) => {
-    const vals = arr.map(d => d[key]).filter(v => v != null);
+    const vals = arr.map(d => d[key]).filter(v => v !== null);
     return vals.length ? +(vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(1) : null;
   };
-  const last7  = history.slice(-7);
-  const last30 = history.slice(-30);
   return {
     week: {
       avg_recovery: avg(last7, 'recovery_score'),
       avg_hrv: avg(last7, 'hrv'),
-      avg_sleep: avg(last7, 'sleep_hours'),
+      avg_sleep_hours: avg(last7, 'sleep_hours'),
+      avg_strain: avg(last7, 'strain'),
       total_workouts: last7.reduce((a, d) => a + (d.workout_count || 0), 0),
-      trend: last7.map(d => ({ date: d.date, score: d.recovery_score })),
+      recovery_trend: last7.map(d => ({ date: d.date, score: d.recovery_score })),
     },
     month: {
       avg_recovery: avg(last30, 'recovery_score'),
       avg_hrv: avg(last30, 'hrv'),
-      avg_sleep: avg(last30, 'sleep_hours'),
+      avg_sleep_hours: avg(last30, 'sleep_hours'),
       total_workouts: last30.reduce((a, d) => a + (d.workout_count || 0), 0),
+      best_recovery: last30.length ? Math.max(...last30.map(d => d.recovery_score).filter(Boolean), 0) : null,
     },
     days_on_program: history.length,
   };
 }
 
-// ─── Generate AI plan ─────────────────────────────────────────────────────────
+// ─── AI Plan ─────────────────────────────────────────────────────────────────
 async function generateAIPlan(whoopData, analytics) {
   console.log('Generating AI plan...');
   const today = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  const r = whoopData.latestRecovery?.score;
+  const s = whoopData.latestSleep?.score;
+  const c = whoopData.latestCycle?.score;
+  const recoveryScore = r?.recovery_score ?? null;
+  const hrv = r?.hrv_rmssd_milli ?? null;
+  const restingHR = r?.resting_heart_rate ?? null;
+  const sleepPerf = s?.sleep_performance_percentage ?? null;
+  const sleepHours = s?.total_in_bed_time_milli ? +(s.total_in_bed_time_milli / 3600000).toFixed(1) : null;
+  const strain = c?.strain ?? null;
+  const calories = c?.kilojoule ? +(c.kilojoule / 4.184).toFixed(0) : null;
 
-  const r = whoopData.recovery?.score;
-  const s = whoopData.sleep?.score;
-  const c = whoopData.cycle?.score;
+  const prompt = `You are FitAI, a world-class personal trainer and nutritionist. Today is ${today}.
 
-  const prompt = `You are FitAI, a world-class personal trainer. Today is ${today}.
+USER PROFILE:
+- Name: Ash, Height: 163cm, Weight: 70kg
+- Goal: Fat loss, build six-pack, get lean and attractive
+- Diet: Non-vegetarian
+- Gym schedule: Tue & Thu at office gym, Mon/Wed/Fri gym after 6pm, Sat/Sun free
+- Fitness level: Complete beginner
+- Fixed breakfast: Overnight oats + milk
+- Daily must-haves: Activia yogurt and fruit
 
-USER: Ash, 163cm, 70kg, goal: fat loss + six-pack, non-veg diet, beginner.
-Breakfast: overnight oats + milk. Must have: Activia yogurt + fruit daily.
-Gym: Tue/Thu office gym, Mon/Wed/Fri after 6pm, weekends free.
+TODAY'S WHOOP DATA:
+- Recovery Score: ${recoveryScore ?? 'N/A'}%
+- HRV: ${hrv ?? 'N/A'} ms
+- Resting HR: ${restingHR ?? 'N/A'} bpm
+- Sleep Performance: ${sleepPerf ?? 'N/A'}%
+- Sleep Hours: ${sleepHours ?? 'N/A'}
+- Strain: ${strain ?? 'N/A'}/21
+- Calories Burned: ${calories ?? 'N/A'} kcal
 
-WHOOP TODAY:
-- Recovery: ${r?.recovery_score ?? 'N/A'}%
-- HRV: ${r?.hrv_rmssd_milli ?? 'N/A'} ms
-- Resting HR: ${r?.resting_heart_rate ?? 'N/A'} bpm
-- Sleep: ${s?.total_in_bed_time_milli ? (s.total_in_bed_time_milli/3600000).toFixed(1) : 'N/A'} hrs (${s?.sleep_performance_percentage ?? 'N/A'}%)
-- Strain: ${c?.strain ?? 'N/A'}/21
-- Calories: ${c?.kilojoule ? (c.kilojoule/4.184).toFixed(0) : 'N/A'} kcal
+WEEKLY AVERAGES:
+- Avg Recovery: ${analytics.week.avg_recovery ?? 'N/A'}%
+- Avg HRV: ${analytics.week.avg_hrv ?? 'N/A'} ms
+- Avg Sleep: ${analytics.week.avg_sleep_hours ?? 'N/A'} hrs
+- Workouts this week: ${analytics.week.total_workouts}
 
-WEEKLY: Recovery ${analytics.week.avg_recovery}%, HRV ${analytics.week.avg_hrv}ms, Sleep ${analytics.week.avg_sleep}hrs, Workouts ${analytics.week.total_workouts}
-MONTHLY: Recovery ${analytics.month.avg_recovery}%, Workouts ${analytics.month.total_workouts}
 Days on program: ${analytics.days_on_program}
 
-Return ONLY a valid JSON object. No markdown, no explanation. Start with { end with }:
+Respond ONLY with valid JSON, no markdown:
 {
   "date": "${today}",
-  "recovery_score": ${r?.recovery_score ?? null},
-  "hrv": ${r?.hrv_rmssd_milli ?? null},
-  "resting_hr": ${r?.resting_heart_rate ?? null},
-  "sleep_hours": ${s?.total_in_bed_time_milli ? (s.total_in_bed_time_milli/3600000).toFixed(1) : null},
-  "sleep_performance": ${s?.sleep_performance_percentage ?? null},
-  "strain": ${c?.strain ?? null},
-  "calories_burned": ${c?.kilojoule ? (c.kilojoule/4.184).toFixed(0) : null},
-  "recovery_trend": ${JSON.stringify(analytics.week.trend)},
-  "daily_status": "Green",
-  "status_message": "motivational sentence based on WHOOP data",
-  "weekly_insight": "2-3 sentences analyzing weekly trend",
-  "monthly_insight": "2-3 sentences on monthly progress toward six-pack",
+  "recovery_score": ${recoveryScore},
+  "hrv": ${hrv},
+  "resting_hr": ${restingHR},
+  "sleep_performance": ${sleepPerf},
+  "sleep_hours": ${sleepHours},
+  "strain": ${strain},
+  "calories_burned": ${calories},
+  "recovery_trend": ${JSON.stringify(analytics.week.recovery_trend)},
+  "daily_status": "Green or Yellow or Red",
+  "status_message": "motivational sentence",
+  "weekly_insight": "2-3 sentences on weekly trend",
+  "monthly_insight": "2-3 sentences on monthly progress",
   "workout": {
     "recommended": true,
-    "type": "e.g. Upper Body Strength",
+    "type": "workout type",
     "duration_minutes": 45,
-    "intensity": "Medium",
-    "rationale": "why this workout based on recovery data",
-    "warmup": "5 min warmup description",
-    "cooldown": "5 min cooldown description",
+    "intensity": "Low/Medium/High",
     "exercises": [
-      { "name": "Exercise name", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "key form tip", "youtube_search": "exercise name proper form beginner" },
-      { "name": "Exercise name", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "key form tip", "youtube_search": "exercise name proper form beginner" },
-      { "name": "Exercise name", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "key form tip", "youtube_search": "exercise name proper form beginner" },
-      { "name": "Exercise name", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "key form tip", "youtube_search": "exercise name proper form beginner" },
-      { "name": "Exercise name", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "key form tip", "youtube_search": "exercise name proper form beginner" }
-    ]
+      { "name": "Exercise", "sets": 3, "reps": "10-12", "rest_seconds": 60, "notes": "form tip", "youtube_search": "exercise tutorial" }
+    ],
+    "warmup": "warmup instructions",
+    "cooldown": "cooldown instructions",
+    "rationale": "why this workout"
   },
   "meal_plan": {
     "total_calories_target": 1800,
@@ -172,19 +260,15 @@ Return ONLY a valid JSON object. No markdown, no explanation. Start with { end w
     "carbs_g": 160,
     "fat_g": 60,
     "meals": [
-      { "time": "7:00 AM",  "name": "Breakfast",   "description": "Overnight oats (50g) + 200ml milk, Activia yogurt (125g), mixed berries (100g)", "calories": 450, "protein_g": 25 },
-      { "time": "10:30 AM", "name": "Snack",        "description": "specific snack with quantities", "calories": 200, "protein_g": 15 },
-      { "time": "1:00 PM",  "name": "Lunch",        "description": "specific non-veg lunch with quantities", "calories": 550, "protein_g": 40 },
-      { "time": "4:00 PM",  "name": "Pre-workout",  "description": "specific pre-workout snack", "calories": 200, "protein_g": 10 },
-      { "time": "7:30 PM",  "name": "Dinner",       "description": "specific non-veg dinner with quantities", "calories": 500, "protein_g": 45 }
+      { "time": "7:00 AM", "name": "Breakfast", "description": "Overnight oats + milk, Activia yogurt, fruit", "calories": 450, "protein_g": 25 },
+      { "time": "10:30 AM", "name": "Snack", "description": "snack description", "calories": 200, "protein_g": 15 },
+      { "time": "1:00 PM", "name": "Lunch", "description": "non-veg lunch", "calories": 550, "protein_g": 40 },
+      { "time": "4:00 PM", "name": "Pre-workout", "description": "pre workout snack", "calories": 200, "protein_g": 10 },
+      { "time": "7:30 PM", "name": "Dinner", "description": "non-veg dinner", "calories": 500, "protein_g": 45 }
     ]
   },
-  "daily_tips": [
-    "specific tip based on today recovery score",
-    "specific tip based on weekly sleep trend",
-    "specific tip for six-pack progress"
-  ],
-  "progress_insight": "detailed 3-4 sentence paragraph on six-pack progress using all available data",
+  "daily_tips": ["tip 1", "tip 2", "tip 3"],
+  "progress_insight": "detailed progress paragraph",
   "week_number": ${Math.ceil(analytics.days_on_program / 7) || 1},
   "days_on_program": ${analytics.days_on_program}
 }`;
@@ -197,92 +281,49 @@ Return ONLY a valid JSON object. No markdown, no explanation. Start with { end w
       'anthropic-version': '2023-06-01',
     },
     body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
+      model: 'claude-sonnet-4-20250514',
       max_tokens: 4000,
       messages: [{ role: 'user', content: prompt }],
     }),
   });
-
-  const json = await res.json();
-  console.log('Claude API status:', res.status);
-  if (!res.ok) throw new Error(`Claude API failed: ${JSON.stringify(json)}`);
-
-  const text = json.content?.[0]?.text;
-  if (!text) throw new Error(`Empty Claude response: ${JSON.stringify(json)}`);
-  console.log('Claude response length:', text.length);
-
+  const data = await res.json();
+  const text = data.content?.[0]?.text || '';
   const clean = text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
   return JSON.parse(clean);
+}
+
+// ─── Add YouTube links ────────────────────────────────────────────────────────
+function addYouTubeLinks(plan) {
+  if (!plan.workout?.exercises) return plan;
+  plan.workout.exercises = plan.workout.exercises.map(ex => ({
+    ...ex,
+    youtube_url: `https://www.youtube.com/results?search_query=${encodeURIComponent(ex.youtube_search || ex.name + ' exercise tutorial')}`,
+  }));
+  return plan;
 }
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
 async function main() {
   try {
-    // 1. Load refresh token (from file or env secret on first run)
-    const refreshToken = loadRefreshToken();
-
-    // 2. Exchange for access token + new refresh token
-    const { accessToken, newRefreshToken } = await refreshAccessToken(refreshToken);
-
-    // 3. Save new refresh token to repo file (auto-committed by workflow)
-    saveRefreshToken(newRefreshToken);
-
-    // 4. Fetch WHOOP data
-    const get = whoopGet(accessToken);
-    const [recoveryData, sleepData, cycleData, workoutData] = await Promise.all([
-      get('/recovery?limit=7'),
-      get('/activity/sleep?limit=7'),
-      get('/cycle?limit=7'),
-      get('/activity/workout?limit=10'),
-    ]);
-
-    const whoopData = {
-      recovery: recoveryData.records?.[0] || null,
-      sleep:    sleepData.records?.[0]    || null,
-      cycle:    cycleData.records?.[0]    || null,
-      workouts: workoutData.records       || [],
-    };
-    console.log('✅ WHOOP data fetched');
-
-    // 5. Update history
-    const history = loadHistory();
-    const today = new Date().toISOString().split('T')[0];
-    const entry = {
-      date:           today,
-      recovery_score: whoopData.recovery?.score?.recovery_score ?? null,
-      hrv:            whoopData.recovery?.score?.hrv_rmssd_milli ?? null,
-      resting_hr:     whoopData.recovery?.score?.resting_heart_rate ?? null,
-      sleep_hours:    whoopData.sleep?.score?.total_in_bed_time_milli
-                        ? +(whoopData.sleep.score.total_in_bed_time_milli / 3600000).toFixed(1) : null,
-      strain:         whoopData.cycle?.score?.strain ?? null,
-      workout_count:  whoopData.workouts.filter(w => w.start?.split('T')[0] === today).length,
-    };
-    const idx = history.findIndex(h => h.date === today);
-    if (idx >= 0) history[idx] = entry; else history.push(entry);
-    saveHistory(history);
-
-    // 6. Compute analytics
-    const analytics = computeAnalytics(history);
-
-    // 7. Generate AI plan
-    const plan = await generateAIPlan(whoopData, analytics);
-
-    // 8. Add YouTube links
-    if (plan.workout?.exercises) {
-      plan.workout.exercises = plan.workout.exercises.map(ex => ({
-        ...ex,
-        youtube_url: `https://www.youtube.com/results?search_query=${encodeURIComponent(ex.youtube_search || ex.name + ' exercise tutorial')}`,
-      }));
+    const { accessToken, newRefreshToken } = await refreshAccessToken();
+    if (newRefreshToken && GITHUB_TOKEN && GITHUB_REPOSITORY) {
+      await updateGitHubSecret('WHOOP_REFRESH_TOKEN', newRefreshToken);
     }
-
-    // 9. Save daily plan
-    const out = path.join(__dirname, '../src/data/daily-plan.json');
-    fs.mkdirSync(path.dirname(out), { recursive: true });
-    fs.writeFileSync(out, JSON.stringify(plan, null, 2));
-    console.log(`✅ Done! Recovery: ${plan.recovery_score}% | Sleep: ${plan.sleep_hours}h | Strain: ${plan.strain}`);
-
+    const whoopData = await fetchWhoopData(accessToken);
+    const history = loadHistory();
+    const todayEntry = buildHistoryEntry(whoopData);
+    const idx = history.findIndex(h => h.date === todayEntry.date);
+    if (idx >= 0) history[idx] = todayEntry; else history.push(todayEntry);
+    saveHistory(history);
+    const analytics = computeAnalytics(history);
+    let plan = await generateAIPlan(whoopData, analytics);
+    plan = addYouTubeLinks(plan);
+    const outputPath = path.join(__dirname, '../src/data/daily-plan.json');
+    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+    fs.writeFileSync(outputPath, JSON.stringify(plan, null, 2));
+    console.log(`✅ Done! Recovery: ${plan.recovery_score}% | Sleep: ${plan.sleep_hours}h`);
   } catch (err) {
-    console.error('❌', err.message);
+    console.error('❌ Error:', err.message);
     process.exit(1);
   }
 }
