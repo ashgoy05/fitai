@@ -51,6 +51,7 @@ async function getTokens(refreshToken) {
     body.append('refresh_token', refreshToken);
     body.append('client_id', WHOOP_CLIENT_ID);
     body.append('client_secret', WHOOP_CLIENT_SECRET);
+    body.append('scope', 'offline read:recovery read:cycles read:workout read:sleep read:profile read:body_measurement');
     const res = await fetch('https://api.prod.whoop.com/oauth/oauth2/token', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
