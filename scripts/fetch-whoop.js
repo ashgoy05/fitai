@@ -260,7 +260,25 @@ async function fetchWhoopData(accessToken){
 
 }
 
-
+function buildHistoryEntry(whoopData, today) {
+    const r = whoopData.recovery?.score;
+    const s = whoopData.sleep?.score;
+    const c = whoopData.cycle?.score;
+    return {
+        date: today,
+        recovery_score: r?.recovery_score ?? null,
+        hrv: r?.hrv_rmssd_milli ?? null,
+        resting_hr: r?.resting_heart_rate ?? null,
+        sleep_hours: s?.total_in_bed_time_milli
+            ? +(s.total_in_bed_time_milli / 3600000).toFixed(1) : null,
+        sleep_performance: s?.sleep_performance_percentage ?? null,
+        strain: c?.strain ?? null,
+        calories: c?.kilojoule ? +(c.kilojoule / 4.184).toFixed(0) : null,
+        workout_count: whoopData.workouts.filter(
+            w => w.start?.split('T')[0] === today
+        ).length,
+    };
+}
 
 // -----------------------------------------------------
 // HISTORY
