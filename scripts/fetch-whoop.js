@@ -23,6 +23,7 @@ function getRefreshToken() {
   } catch {
     console.log('tokens.json not found, using env secret');
   }
+}
 
 // ─── STEP 2: Hit token URL to get new access + refresh tokens ────────────────
 async function getTokens(refreshToken) {
