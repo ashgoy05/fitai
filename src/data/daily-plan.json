@@ -1,12 +1,12 @@
 {
-  "date": "Saturday, June 13, 2026",
-  "recovery_score": 49,
-  "hrv": 35.17079,
-  "resting_hr": 77,
+  "date": "Sunday, June 14, 2026",
+  "recovery_score": 54,
+  "hrv": 35.58935,
+  "resting_hr": 78,
   "sleep_hours": null,
-  "sleep_performance": 75,
-  "strain": 10.947873,
-  "calories_burned": 2280,
+  "sleep_performance": 77,
+  "strain": 4.1048427,
+  "calories_burned": 570,
   "recovery_trend": [
     {
       "date": "2026-06-05",
@@ -19,21 +19,25 @@
     {
       "date": "2026-06-13",
       "score": 49
+    },
+    {
+      "date": "2026-06-14",
+      "score": 54
     }
   ],
   "daily_status": "Yellow",
-  "status_message": "Ash, your recovery is in Yellow zone (49%) — you're managing well for Day 3, but sleep performance at 75% shows you need deeper rest. Today is a perfect REST DAY to let your body recover before hitting hard workouts Monday-Thursday. Use this Saturday to walk, relax, and fuel properly. Your HRV is stable and resting HR is healthy — you're building a solid foundation!",
-  "weekly_insight": "Your recovery has dipped slightly from 56% to 49% over the week, which is normal for a beginner starting intensive training. HRV remains stable around 35ms, indicating consistent nervous system stress — this will improve as your body adapts. Sleep performance at 75% is your biggest opportunity: prioritize 7-8 hours tonight to hit Green recovery by Monday's workout.",
-  "monthly_insight": "You're only 3 days in, so monthly data isn't meaningful yet. However, starting with Yellow recovery and 75% sleep is realistic for a beginner. Your six-pack timeline depends heavily on hitting consistent 70%+ recovery, full workouts Mon-Thu, and strict 1700-1900 kcal nutrition. Focus this week on establishing the sleep routine — aim for 10:30pm bedtime starting tonight.",
+  "status_message": "Ash, your recovery bounced back nicely to 54% today — that's good movement in the right direction! You're showing resilience at just 4 days in. Sunday is your rest day anyway, but your body is telling you it needs quality sleep tonight. Focus on getting deep rest and you'll crush the week ahead.",
+  "weekly_insight": "This week shows a dip on Friday (49%) but recovery is climbing again — your body is adapting to training. HRV remains stable around 35ms, which is normal for a beginner. Sleep data is missing, but your 77% performance score suggests you're sleeping but not optimally — prioritize 7-8 hours tonight to set up Tuesday's office gym session.",
+  "monthly_insight": "You're only 4 days in, but the early pattern is encouraging: recovery is hovering in the 50-56% range, which shows your body is handling beginner workouts well. Consistency with nutrition and sleep over the next 3-4 weeks will be the real driver of visible six-pack progress.",
   "workout": {
     "recommended": false,
-    "type": "Light 20-minute walk (optional)",
+    "type": "Rest Day - Light Walk Optional",
     "duration_minutes": 20,
     "intensity": "Low",
-    "rationale": "Saturday is your scheduled rest day, and your recovery at 49% (Yellow zone) confirms you should NOT do a full workout today. Your body has only had 3 days of training stimulus — it needs recovery to adapt and get stronger. A gentle 20-minute walk (20 min easy pace) will boost blood flow and aid recovery WITHOUT adding strain.",
-    "warmup": null,
-    "cooldown": null,
-    "exercises": null
+    "rationale": "Sunday is your designated rest day per gym schedule. Your recovery at 54% is Yellow — perfectly fine for rest. A leisurely 20-minute walk (2-3 km) will aid active recovery without taxing your system. Save your energy for Tuesday's office gym session.",
+    "warmup": "N/A - Rest day. If choosing light walk: 5 min easy walking to start, gradually build pace.",
+    "cooldown": "N/A - If walking, cool down with 3 min easy walking + 2 min gentle stretching (hamstrings, calves, hip flexors).",
+    "exercises": []
   },
   "meal_plan": {
     "total_calories_target": 1800,
@@ -43,54 +47,54 @@
     "meals": [
       {
         "time": "7:00 AM",
-        "name": "Breakfast",
-        "description": "Overnight oats with banana & almonds: 1/2 cup rolled oats + 1 cup full-fat milk + 1 sliced banana + 10 almonds (soaked overnight in fridge). Top with 1 tbsp honey. Warm gently before eating if preferred. With this meal, take: Multivitamin, Vitamin D3 (2000 IU), Omega-3 (1000mg), Vitamin E (400 IU), Zinc (15mg).",
+        "name": "Breakfast - Overnight Oats with Mango & Almonds",
+        "description": "Mix 50g rolled oats + 200ml whole milk + 1 tbsp honey in a jar (prepare night before). In the morning, top with 100g fresh mango chunks, 10 whole almonds (chopped), and a pinch of cardamom. Stir well and eat fresh. Take with this meal: Multivitamin, Vitamin D3 (2000 IU), Omega-3 (1 capsule), Vitamin E (400 IU), Zinc (15mg).",
         "calories": 450,
         "protein_g": 18
       },
       {
         "time": "10:30 AM",
-        "name": "Mid-Morning Snack",
-        "description": "1 orange (medium) + 1 cup plain Activia yogurt (125g). The Activia fulfills your daily yogurt anchor. Provides hydration and sustained energy.",
-        "calories": 150,
-        "protein_g": 8
+        "name": "Mid-Morning Snack - Greek Yogurt & Apple",
+        "description": "1 bowl (150g) plain Greek yogurt (or Activia yogurt if using your daily anchor here) mixed with 1 medium apple (grated or chopped). Add a sprinkle of cinnamon. This satisfies the Activia requirement if placed here, OR save Activia for another meal.",
+        "calories": 180,
+        "protein_g": 12
       },
       {
         "time": "1:00 PM",
-        "name": "Lunch",
-        "description": "Moong dal rice bowl: 1 cup cooked white rice + 1 cup cooked moong dal (tempered with 1 tbsp ghee, mustard seeds, curry leaves, 1 onion, 1 tomato, green chili) + side of cucumber raita (1/2 cup curd mixed with cucumber, salt, cumin). Traditional Tamil/South Indian style. Moong dal is lighter on your GI system after rest day.",
+        "name": "Lunch - Moong Dal Rice Bowl",
+        "description": "1 cup cooked white rice (150g) + 1 cup cooked moong dal (yellow lentils, 200g prepared). Season dal with 1 tsp ghee, 1/2 tsp cumin seeds, 2-3 curry leaves, pinch of turmeric, salt. Mix together. Add 1 small bowl cucumber raita (50g dahi mixed with grated cucumber, pinch of cumin). This is a protein-forward vegetarian meal — moong dal provides 18g protein per cup cooked.",
         "calories": 550,
-        "protein_g": 40
+        "protein_g": 42
       },
       {
         "time": "4:30 PM",
-        "name": "Pre-Workout Snack",
-        "description": "NOT NEEDED TODAY — Rest day. Instead, have: 1 apple + 8 walnuts for sustained energy if you choose to take the optional 20-min walk. Take Pre-workout + Fiber supplements only if doing the optional walk.",
+        "name": "Pre-Workout Snack - Banana & Walnuts",
+        "description": "1 medium banana (100g) + 8 walnut halves. This provides quick carbs for energy and healthy fats. Take Pre-workout supplement (as directed on bottle) + Fiber supplement (1 scoop mixed in 150ml water) approximately 30 minutes before heading to gym or starting home workout.",
+        "calories": 200,
+        "protein_g": 6
+      },
+      {
+        "time": "After Gym (if doing light walk only, skip this)",
+        "name": "Post-Workout - Protein Powder Shake",
+        "description": "1 scoop protein powder (whey or plant-based) mixed with 300ml whole milk or water. Consume within 30 minutes of finishing any physical activity. This provides quick muscle recovery amino acids. On rest days like today, this is optional — use only if you did the optional light walk.",
         "calories": 150,
-        "protein_g": 5
+        "protein_g": 28
       },
       {
-        "time": "6:30 PM",
-        "name": "Evening Snack (Rest Day Alternative)",
-        "description": "1 cup Greek yogurt (plain, full-fat, 5-6% fat) + 1 tbsp mixed berries (strawberry OK, avoid blueberries). Provides extra protein and probiotics for gut health on rest days.",
-        "calories": 180,
-        "protein_g": 20
-      },
-      {
-        "time": "8:00 PM",
-        "name": "Dinner",
-        "description": "Egg bhurji with roti: 3 whole eggs scrambled with 1 onion, 1 tomato, green chili, turmeric, salt, 1 tbsp oil. Serve with 2 whole wheat rotis (or 1.5 if feeling full). Add side of steamed broccoli (1 cup) for fiber and minerals. 30 minutes before bed (9:30 PM): Take Magnesium (400mg) with water to improve sleep quality and aid recovery.",
-        "calories": 420,
-        "protein_g": 32
+        "time": "7:30 PM",
+        "name": "Dinner - Egg Bhurji with Roti & Sprouts",
+        "description": "3 whole eggs scrambled in 1 tsp oil with 1/4 onion (diced), 1/4 tomato (diced), 1/2 green chili (minced), salt, pepper. Serve with 1 whole wheat roti or 2 small rotlis. Add 1 small side bowl of fresh moong sprouts (100g) seasoned with lemon juice, salt, chaat masala. Sprouts add raw enzymes and extra protein. Take Magnesium supplement (300-400mg) 30 minutes before bed with water.",
+        "calories": 400,
+        "protein_g": 26
       }
     ]
   },
   "daily_tips": [
-    "Yellow recovery at 49% means your CNS is moderately fatigued — rest days are NOT lazy days, they're when adaptation happens. Use today to move gently, eat well, and hydrate deeply. Your body will be ready to crush Monday's session.",
-    "Your moong dal lunch is perfect for Saturday: lighter than chicken, easier to digest, and keeps GI system calm on rest days. Combine with white rice for fast carb absorption and curd for probiotics — this is classic Indian recovery nutrition.",
-    "Sleep is your weak link at 75% performance — tonight, aim for 10:30 PM bedtime. Use magnesium supplement 30 min before sleep, avoid screens after 9 PM, keep room cool (68°F if possible). Better sleep = faster fat loss and six-pack visibility."
+    "Your recovery at 54% (Yellow) is in the 'work harder but stay smart' zone. Rest days like today are non-negotiable — they're when your muscles actually grow and adapt. Use this Sunday to meal-prep for the week and get 8 hours sleep tonight.",
+    "Your moong dal at lunch provides complete protein with all amino acids, especially strong in leucine which triggers muscle protein synthesis. Pair it always with rice for better carb absorption and sustained energy through the afternoon.",
+    "Your sleep performance was 77% last night — that's good but not optimal. Tonight, aim for 8 full hours in a cool, dark room. Sleep is where your HRV improves and your six-pack gets built. No phone 30 minutes before bed."
   ],
-  "progress_insight": "Ash, you're 3 days in and already building discipline — that's excellent. Your WHOOP data shows Yellow recovery (49%) which is normal for a beginner, but the 75% sleep performance is your biggest opportunity. Your resting heart rate at 77 bpm will drop as fitness improves. To unlock your six-pack, you need: (1) Sleep 7-8 hours nightly to hit 70%+ recovery, (2) Strict 1700-1900 kcal adherence (today's burn was 2280 kcal — you're in deficit, good), and (3) Full intensity Mon-Thu workouts when recovery is Green. This week, your singular focus should be hitting 8 hours sleep by Wednesday so Monday's workout is at Green recovery level. You've got the nutrition foundation solid — now prioritize sleep.",
+  "progress_insight": "Ash, after 4 days you're showing solid foundational habits: meal timing is consistent, supplements are daily, and your body is recovering at a stable 54% average. Your HRV at 35ms and resting HR at 78 are normal for a beginner — expect these to improve as cardiovascular fitness builds over 6-8 weeks. The missing sleep data concerns me slightly; sleep is 50% of fat loss. This week, focus on two things: (1) Hit 7-8 hours sleep nightly — this directly impacts HRV recovery and hunger hormones for fat loss. (2) Maintain the 1700-1900 calorie target with 130g+ protein — you're on track. Visible six-pack progress typically shows after 4-6 weeks of consistent training + nutrition. You're building the right foundation now.",
   "week_number": 1,
-  "days_on_program": 3
+  "days_on_program": 4
 }
