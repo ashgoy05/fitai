@@ -1,5 +1,5 @@
 {
-  "date": "Tuesday, June 16, 2026",
+  "date": "Wednesday, June 17, 2026",
   "recovery_score": 54,
   "hrv": 35.58935,
   "resting_hr": 78,
@@ -31,65 +31,69 @@
     {
       "date": "2026-06-16",
       "score": 54
+    },
+    {
+      "date": "2026-06-17",
+      "score": 54
     }
   ],
   "daily_status": "Yellow",
-  "status_message": "Ash, your recovery is holding steady at 54% — solid Yellow status for training today! Your HRV is consistent at 35.6ms, showing your nervous system is stable. With 77% sleep performance, you're doing well despite unknown sleep hours. Time for a MODERATE intensity workout at the office gym today — push hard but don't overextend. You're building momentum on Day 6!",
-  "weekly_insight": "This week shows recovery stabilization after a slight dip on Monday-Wednesday. Your HRV remains consistently around 35-36ms, which is normal for a beginner; as fitness improves, this will increase. Sleep performance is steady at 77%, but logging actual sleep hours will help optimize recovery — aim for 7-8 hours nightly to boost that Yellow to Green.",
-  "monthly_insight": "With only 1 workout tracked across 30 days, your program is still ramping up, which is appropriate for a beginner. Recovery averaging 52.7% suggests you're managing stress well, but expect this to improve as your body adapts to consistent training. Focus on hitting all 5-6 gym sessions per week for the next 2 weeks to accelerate fat loss and core definition.",
+  "status_message": "Ash, your recovery is holding steady at 54% — that's Yellow zone territory. Your HRV is stable at 35.6ms and resting heart rate is normal at 78bpm. You're recovering, but not fully recharged. Today's a MODERATE intensity workout day — push hard but smart. You're 7 days in and building consistency. That's the real win here.",
+  "weekly_insight": "This week shows a positive recovery rebound after the dip on Tuesday-Wednesday last week. Your HRV remains consistently in the 35-36ms range, which is solid for a beginner establishing baseline fitness. Sleep performance at 77% is decent but inconsistent — prioritizing 7-8 hours tonight will help push recovery above 60% this weekend.",
+  "monthly_insight": "You're 7 days into your transformation. While one week is early, your recovery metrics show your body is adapting to the new training stimulus. Your resting heart rate at 78bpm is normal for your fitness level; expect it to drop to 70bpm or lower as conditioning improves over 4-6 weeks.",
   "workout": {
     "recommended": true,
-    "type": "Upper Body + Core Focus (Beginner)",
+    "type": "Full Body Strength + Light Cardio (Day 7 Beginner Push)",
     "duration_minutes": 45,
     "intensity": "Medium",
-    "rationale": "54% recovery = Yellow zone. Safe for moderate intensity training without overextending. Tuesday office gym session — focus on building upper body strength while engaging core for six-pack visibility. Avoid heavy lower body to preserve recovery for Friday's session.",
-    "warmup": "5 minutes: 2 min light jogging or brisk walking on treadmill, 30 sec arm circles (10 each direction), 30 sec bodyweight squats (15 reps slow), 1 min arm swings and shoulder rolls. Finish with 2 min dynamic stretching (leg swings, torso twists).",
-    "cooldown": "5 minutes: 2 min slow walking to lower heart rate, then: Chest stretch (30 sec each side), Shoulder stretch (30 sec each side), Seated forward fold (30 sec), Child's pose (30 sec). Breathe deeply — 4 counts in, 6 counts out.",
+    "rationale": "Recovery is 54% (Yellow zone) — you can train, but avoid max effort. Wednesday gym schedule allows full body work. Low strain yesterday (4.1) means you're fresh enough for moderate intensity. Focus on solid form and controlled reps rather than heavy weight.",
+    "warmup": "5 minutes: 2 min light walking on treadmill or in place, 1 min arm circles (10 forward, 10 back), 1 min leg swings (10 each leg forward/back), 1 min glute bridges (15 reps slow) to activate posterior chain.",
+    "cooldown": "5 minutes: 1 min walking in place to lower heart rate, 30 sec quad stretch (each leg), 30 sec hamstring fold, 30 sec chest opener arms behind back, 30 sec child's pose, 1 min deep breathing (4 count in, 6 count out).",
     "exercises": [
       {
-        "name": "Push-ups (or Incline Push-ups on bench)",
+        "name": "Goblet Squats",
         "sets": 3,
-        "reps": "8-12",
-        "rest_seconds": 75,
-        "notes": "Keep elbows at 45° angle, not flaring out. Lower chest to 2 inches above ground. Core tight — imagine bracing for a punch. If full push-ups too hard, do incline push-ups on gym bench or wall push-ups.",
-        "youtube_search": "proper push-up form beginner full range of motion",
-        "youtube_url": "https://www.youtube.com/results?search_query=proper%20push-up%20form%20beginner%20full%20range%20of%20motion"
+        "reps": "12-15",
+        "rest_seconds": 60,
+        "notes": "Hold a dumbbell or kettlebell at chest height. Feet shoulder-width apart. Lower hips back and down like sitting in a chair. Keep chest up, weight in heels. Full range of motion builds leg strength for visible abs definition.",
+        "youtube_search": "goblet squats proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=goblet%20squats%20proper%20form%20beginner"
       },
       {
-        "name": "Dumbbell Rows (single arm, each side)",
+        "name": "Push-ups (Incline or Knee)",
+        "sets": 3,
+        "reps": "8-12",
+        "rest_seconds": 60,
+        "notes": "Hands on elevated surface (bench/wall) or knees on floor. Body straight line from head to heels/knees. Lower chest toward surface, elbows at 45 degrees. Push back up with control. Core stays tight throughout.",
+        "youtube_search": "beginner push ups proper form incline knee",
+        "youtube_url": "https://www.youtube.com/results?search_query=beginner%20push%20ups%20proper%20form%20incline%20knee"
+      },
+      {
+        "name": "Dumbbell Rows (Single Arm)",
         "sets": 3,
         "reps": "10-12 per side",
         "rest_seconds": 60,
-        "notes": "Hinge at hips, one knee on bench. Pull dumbbell to ribcage, squeeze shoulder blade. Don't rotate torso. Use light weight (5-8kg) to master form — quality over ego.",
-        "youtube_search": "single arm dumbbell row proper form beginner",
-        "youtube_url": "https://www.youtube.com/results?search_query=single%20arm%20dumbbell%20row%20proper%20form%20beginner"
+        "notes": "One knee on bench, opposite foot on ground. Row dumbbell to hip, squeezing shoulder blade. Control on the way down. This builds back strength which supports posture and core definition.",
+        "youtube_search": "single arm dumbbell rows beginner proper form",
+        "youtube_url": "https://www.youtube.com/results?search_query=single%20arm%20dumbbell%20rows%20beginner%20proper%20form"
       },
       {
-        "name": "Plank Hold (bodyweight)",
+        "name": "Plank Hold",
         "sets": 3,
         "reps": "20-30 seconds",
         "rest_seconds": 60,
-        "notes": "Shoulders over wrists, body in straight line from head to heels. Engage core — don't let hips sag or pike up. This directly strengthens your six-pack. Breathe steadily.",
-        "youtube_search": "perfect plank form beginner core engagement",
-        "youtube_url": "https://www.youtube.com/results?search_query=perfect%20plank%20form%20beginner%20core%20engagement"
+        "notes": "Forearms on ground, elbows under shoulders. Body straight line. Engage core, don't let hips sag. Look slightly ahead. Breathing: exhale during hold. This is foundational for six-pack visibility.",
+        "youtube_search": "plank hold proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=plank%20hold%20proper%20form%20beginner"
       },
       {
-        "name": "Dumbbell Shoulder Press (seated or standing)",
+        "name": "Glute Bridges",
         "sets": 3,
-        "reps": "10-12",
-        "rest_seconds": 75,
-        "notes": "Dumbbells at shoulder height, elbows 45° forward. Press straight up, full lockout at top. Control on way down — 2 seconds down. Avoid arching lower back excessively.",
-        "youtube_search": "dumbbell shoulder press beginner form seated",
-        "youtube_url": "https://www.youtube.com/results?search_query=dumbbell%20shoulder%20press%20beginner%20form%20seated"
-      },
-      {
-        "name": "Dead Bug (core work, bodyweight)",
-        "sets": 3,
-        "reps": "10-12 per side",
+        "reps": "15-20",
         "rest_seconds": 60,
-        "notes": "Lie on back, arms extended up, knees at 90°. Lower opposite arm and leg simultaneously, tap floor, return. Move slowly and controlled. This teaches core stability for six-pack definition.",
-        "youtube_search": "dead bug exercise proper form beginner core",
-        "youtube_url": "https://www.youtube.com/results?search_query=dead%20bug%20exercise%20proper%20form%20beginner%20core"
+        "notes": "Lie on back, knees bent, feet flat. Push through heels to lift hips high. Squeeze glutes at top for 1 second. Lower with control. Strong glutes boost metabolism and improve posture for visible core.",
+        "youtube_search": "glute bridges proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=glute%20bridges%20proper%20form%20beginner"
       }
     ]
   },
@@ -101,54 +105,54 @@
     "meals": [
       {
         "time": "7:00 AM",
-        "name": "Breakfast",
-        "description": "Overnight Oats with Strawberry & Almond: Mix 50g rolled oats + 250ml whole milk + 1 tbsp honey in container, refrigerate overnight. Top with 100g fresh strawberries (sliced), 15g sliced almonds, pinch of cinnamon. Creamy, satisfying, protein-rich base. WITH BREAKFAST: Take Multivitamin, Vitamin D3 (2000 IU), Omega-3 (1000mg), Vitamin E (400 IU), Zinc (15mg) with water.",
+        "name": "Breakfast - Overnight Oats with Mango & Almonds",
+        "description": "Mix 1/2 cup rolled oats + 200ml whole milk + 50ml water in container. Refrigerate overnight. Top with 1/2 sliced fresh mango, 8 almonds (crushed), 1 tbsp honey. Stir well. The oats provide steady carbs, milk adds protein and calcium, mango gives natural sweetness without refined sugar. SUPPLEMENTS: Take Multivitamin, Vitamin D3 (2000 IU), Omega-3 (1000mg), Vitamin E (400 IU), Zinc (15mg) with this meal.",
         "calories": 450,
-        "protein_g": 20
+        "protein_g": 18
       },
       {
         "time": "10:30 AM",
-        "name": "Mid-Morning Snack",
-        "description": "125g Activia yogurt (plain or vanilla) + 10 whole almonds. The Activia yogurt is your daily probiotic anchor — essential for gut health and digestion during fat loss.",
-        "calories": 150,
-        "protein_g": 8
+        "name": "Mid-Morning Snack - Apple with Almonds",
+        "description": "1 medium apple (crisp variety like Gala or Fuji) + 10 almonds. The fiber in apple keeps you full, almonds provide healthy fats and protein. Drink 300ml water. Quick, portable, stable blood sugar before lunch.",
+        "calories": 160,
+        "protein_g": 6
       },
       {
         "time": "1:00 PM",
-        "name": "Lunch",
-        "description": "Moong Dal Rice Bowl: 1.5 cups cooked white rice (200g) + 1 cup cooked moong dal (200g) mixed with 1/2 tbsp ghee, salt, cumin seeds. Side: shredded cucumber + carrot salad (raw, 100g). This is a classic Indian protein powerhouse — moong dal absorbs easily and is perfect for fat loss.",
+        "name": "Lunch - Moong Dal Rice Bowl with Sprouts",
+        "description": "1.5 cup cooked white rice + 1 cup moong dal (cooked soft, seasoned with cumin, salt, turmeric) + 1/2 cup mixed sprouts (moong + masoor) sautéed in 1 tsp ghee with ginger-garlic paste + 1/2 onion + green chili. Side: small bowl plain curd (100ml). This rotation avoids chicken today, provides complete plant-based protein via dal-rice combination, sprouts add enzymes and minerals. Satisfying, traditional Indian comfort food.",
         "calories": 550,
-        "protein_g": 40
+        "protein_g": 22
       },
       {
         "time": "4:30 PM",
-        "name": "Pre-Workout Snack",
-        "description": "1 medium banana (120g) + 10g peanut butter mixed in. Quick-digesting carbs for energy. TAKE: Pre-workout supplement (follow packet dosing) + Fiber capsule (1g) 30 minutes before heading to office gym at 5:30pm.",
+        "name": "Pre-Workout Snack - Banana with Peanut Butter",
+        "description": "1 medium banana + 1 tbsp natural peanut butter (unsweetened). The banana provides quick-digesting carbs for energy, peanut butter adds fats for sustained energy. Drink 300ml water. SUPPLEMENTS: Take Pre-workout supplement (as per brand dosing) + Fiber (psyllium husk 1 tsp in 200ml water) 30 minutes before gym at 6:00 PM.",
         "calories": 200,
-        "protein_g": 10
+        "protein_g": 8
       },
       {
-        "time": "After Gym (~6:30 PM)",
-        "name": "Post-Workout Shake",
-        "description": "1 scoop protein powder (vanilla or chocolate flavored) + 300ml whole milk stirred well. Drink immediately within 30 minutes of finishing workout. This locks in muscle protein synthesis for recovery.",
+        "time": "After Gym (~7:15 PM)",
+        "name": "Post-Workout - Protein Powder Shake",
+        "description": "1 scoop whey protein powder + 300ml whole milk (or water if lactose sensitive) + 1/2 frozen banana for creaminess. Blend smooth. Drink within 30 minutes of finishing workout. This provides rapid amino acids (28g protein) to start muscle recovery and repair from today's moderate intensity session.",
         "calories": 150,
         "protein_g": 28
       },
       {
         "time": "7:30 PM",
-        "name": "Dinner",
-        "description": "Egg Bhurji with Roti: 3 large eggs scrambled with 1/2 onion (diced), 1/2 tomato (diced), 1 green chili (minced), turmeric, salt — cooked in 1 tsp oil. Serve with 2 medium rotis (whole wheat). High protein, satisfying, traditional Indian comfort meal. TAKE: Magnesium supplement (400mg) 30 minutes before bed to improve sleep quality and recovery.",
+        "name": "Dinner - Egg Bhurji with Roti & Activia",
+        "description": "3 eggs (whole) scrambled with 1/2 cup finely diced onions + 1/2 cup capsicum (mixed colors) + 1 green chili (minced) + 1/2 tsp turmeric + salt. Cooked in 1 tsp oil over medium heat, stirred frequently. Serve with 2 small rotis (whole wheat). Side: 1 bowl (125g) Activia yogurt (plain or vanilla). Eggs are complete protein, roti provides carbs for recovery, Activia checks the daily yogurt requirement and aids digestion. Light, protein-rich dinner that won't disrupt sleep. SUPPLEMENTS: Take Magnesium (400mg) 30 minutes before bed tonight.",
         "calories": 400,
         "protein_g": 28
       }
     ]
   },
   "daily_tips": [
-    "Yellow recovery (54%) is ideal for Tuesday moderate-intensity work — you're strong enough to push but wise enough not to exceed capacity. This builds sustainable progress without burnout.",
-    "Your moong dal lunch is 'liquid gold' for six-pack seekers: high protein, low fat, easy digestion, and a complete amino acid profile. Dal + rice combinations are Ayurvedic perfection for body recomposition.",
-    "Your sleep performance is 77% despite unknown hours logged — tomorrow morning, start tracking actual bedtime and wake time in your WHOOP app. Even 1 extra hour of quality sleep will push recovery from Yellow to Green and accelerate fat loss."
+    "Your 54% recovery is Yellow — train smart today. Focus on perfect form and controlled tempo rather than lifting heavy. Medium intensity means you build muscle without overtraining. This consistency compounds over weeks into visible six-pack definition.",
+    "Today's meal plan rotates moong dal (lunch) and eggs (dinner) to avoid protein monotony. In Indian cooking, mixing dal varieties and egg preparations keeps metabolism engaged. The sprouts add live enzymes that aid digestion — important when eating 130g protein daily.",
+    "Your sleep performance is 77% — solid but not elite. Tonight after gym, avoid screens 30 min before bed. Your Magnesium supplement will help relax muscles. Aim for 7-8 hours; better sleep pushes recovery above 60% this weekend, enabling harder training sessions."
   ],
-  "progress_insight": "Ash, after 6 days and only 1 tracked workout, you're at a critical momentum point. Your recovery is stable (54%), HRV is consistent (35.6ms), and your sleep performance is solid (77%) — this foundation is excellent. However, the low strain (4.1/21) indicates you haven't yet challenged your body hard enough to see visible six-pack definition. This week, commit to ALL 5 gym sessions (Mon, Tue, Wed, Fri + one weekend walk) and hit the 1800 kcal target daily with 130g protein. Your moong dal, egg, and paneer rotations are perfect; consistency over the next 3 weeks will show visible abs. Focus: Don't miss a single session.",
+  "progress_insight": "Ash, you're exactly where you should be at Day 7. Your recovery pattern has stabilized at 54% after the initial dip, your HRV is consistent at 35.6ms (baseline for beginners), and your resting heart rate at 78bpm is normal for someone starting their fitness journey. The visible six-pack requires three things: consistent training (you're hitting 1 workout per week now — need to build to 4-5), clean nutrition hitting 1700-1900 calories with 120-140g protein (your meal plan does this), and sleep/recovery (77% performance shows you're still adjusting). Your biggest actionable focus this week: establish a solid sleep routine. Getting to 8 hours nightly will push your recovery above 60%, enabling harder workouts and faster fat loss. The abs are built in the kitchen AND the gym AND the bed — you're doing 2 out of 3 well.",
   "week_number": 1,
-  "days_on_program": 6
+  "days_on_program": 7
 }
