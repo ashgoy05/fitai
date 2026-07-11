@@ -10,6 +10,7 @@ import DailyTips from './components/DailyTips.jsx';
 import ProgressInsight from './components/ProgressInsight.jsx';
 import StatsTab from './components/StatsTab.jsx';
 import DailyLog from './components/DailyLog.jsx';
+import WeeklyPlan from './components/WeeklyPlan.jsx';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('today');
@@ -17,12 +18,13 @@ export default function App() {
   const history = historyData || [];
 
   const tabs = [
-    { id: 'today',     label: "📋 Today" },
-    { id: 'workout',   label: '💪 Workout' },
-    { id: 'nutrition', label: '🥗 Nutrition' },
-    { id: 'log',       label: '📝 Daily Log' },
-    { id: 'stats',     label: '📊 Stats' },
-    { id: 'trends',    label: '📈 Trends' },
+    { id: 'today',    label: '📋 Today' },
+    { id: 'weekly',   label: '📅 Week Plan' },
+    { id: 'workout',  label: '💪 Workout' },
+    { id: 'nutrition',label: '🥗 Nutrition' },
+    { id: 'log',      label: '📝 Daily Log' },
+    { id: 'stats',    label: '📊 Stats' },
+    { id: 'trends',   label: '📈 Trends' },
   ];
 
   return (
@@ -39,7 +41,7 @@ export default function App() {
         }}>
           {tabs.map(tab => (
             <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{
-              padding: '9px 16px', borderRadius: '8px', border: 'none',
+              padding: '9px 14px', borderRadius: '8px', border: 'none',
               cursor: 'pointer', fontFamily: 'var(--font-body)', fontSize: '13px',
               fontWeight: '500', transition: 'all 0.2s',
               background: activeTab === tab.id ? 'var(--accent)' : 'transparent',
@@ -50,7 +52,6 @@ export default function App() {
           ))}
         </div>
 
-        {/* Today — workout is fully expandable here too */}
         {activeTab === 'today' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <HeroMetrics plan={plan} />
@@ -60,7 +61,7 @@ export default function App() {
             <ProgressInsight insight={plan.progress_insight} daysOnProgram={plan.days_on_program} weekNumber={plan.week_number} />
           </div>
         )}
-
+        {activeTab === 'weekly'    && <WeeklyPlan />}
         {activeTab === 'workout'   && <WorkoutPlan workout={plan.workout} compact={false} />}
         {activeTab === 'nutrition' && <MealPlan mealPlan={plan.meal_plan} compact={false} />}
         {activeTab === 'log'       && <DailyLog />}
