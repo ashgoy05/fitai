@@ -1,112 +1,112 @@
 {
-  "date": "Saturday, July 11, 2026",
-  "recovery_score": 54,
-  "hrv": 35.58935,
-  "resting_hr": 78,
+  "date": "Sunday, July 12, 2026",
+  "recovery_score": 82,
+  "hrv": 48.19721,
+  "resting_hr": 74,
   "sleep_hours": null,
-  "sleep_performance": 77,
-  "strain": 4.1048427,
-  "calories_burned": 570,
+  "sleep_performance": 65,
+  "strain": 0.035723064,
+  "calories_burned": 72,
   "recovery_trend": [
     {
-      "date": "2026-07-05",
+      "date": "2026-06-13",
       "score": 49
     },
     {
-      "date": "2026-07-06",
-      "score": 49
-    },
-    {
-      "date": "2026-07-07",
+      "date": "2026-06-14",
       "score": 54
     },
     {
-      "date": "2026-07-08",
+      "date": "2026-06-15",
       "score": 54
     },
     {
-      "date": "2026-07-09",
+      "date": "2026-06-16",
       "score": 54
     },
     {
-      "date": "2026-07-10",
+      "date": "2026-06-17",
       "score": 54
     },
     {
       "date": "2026-07-11",
       "score": 54
+    },
+    {
+      "date": "2026-07-12",
+      "score": 82
     }
   ],
-  "daily_status": "Yellow",
-  "status_message": "Ash, your recovery is holding steady at 54% today—solid work on maintaining consistency into week 2. Your Saturday rest day is perfectly timed. Focus on quality sleep tonight and hydration to push toward Green zone recovery by Monday. You're building the foundation for that six-pack, one day at a time.",
-  "weekly_insight": "Your recovery trend shows strong stabilization this week, hovering around 54% after a dip to 49% early on—this indicates your body is adapting to the beginner program. HRV remains consistent at 35.5ms average, suggesting your nervous system is settling into training stress. Sleep performance at 77% is good but prioritize full 7-8 hour nights to unlock Green zone recovery and accelerate fat loss.",
-  "monthly_insight": "You're 8 days in with only 1 workout logged, which tells us you're in the critical adaptation phase. Your low strain (4.1/21) and consistent 54% recovery show your body can handle more volume—next week, aim for 3-4 workouts to accelerate six-pack progress. At 70kg and 163cm with 1710 kcal target, you're positioned for steady 0.5-1kg weekly fat loss if you maintain this discipline.",
+  "daily_status": "Green",
+  "status_message": "Exceptional recovery today, Ash! Your body is telling you it's ready to go—82% recovery is your best score yet. Rest days like this are when your muscles actually build and your nervous system resets. Use today to refuel properly, hydrate well, and prepare for a strong week ahead. You're building momentum.",
+  "weekly_insight": "Your recovery has stabilized around 54% mid-week, but today's spike to 82% on rest day is excellent—your body is responding well to the training stimulus. HRV is climbing (48.19 ms today vs 37.3 ms average), signaling improving cardiovascular adaptation. Sleep performance at 65% suggests you need to prioritize consistent, quality sleep tonight to maintain this recovery momentum.",
+  "monthly_insight": "Day 9 into your program and your recovery capacity is already improving—your best recovery score came today. You've maintained consistent training frequency (1 workout per day average), but the real game-changer for your six-pack will be nailing the nutrition and sleep consistency. You're on track, but expect visible body composition changes by week 3-4 once sleep quality improves.",
   "workout": {
     "recommended": false,
-    "type": "Rest Day — Light Walk or Gentle Yoga",
+    "type": "Rest Day — Light Walk or Stretching",
     "duration_minutes": 25,
     "intensity": "Very Low",
-    "rationale": "Recovery score of 54% is Yellow zone—you need active recovery, not intensity. Saturday office-off status is perfect for light movement to enhance parasympathetic activation and prepare for Monday's workout. Your HRV and resting HR suggest accumulated fatigue; light mobility work will aid muscle repair without additional strain.",
-    "warmup": "5 min easy breathing + gentle arm circles",
-    "cooldown": "10 min foam rolling (calves, quads, back) or child's pose holds",
+    "rationale": "Your 82% recovery score is excellent and indicates your body needs active recovery, not training stress. Sunday rest days are critical for CNS recovery and muscle repair. Light movement will enhance blood flow and reduce soreness without adding strain.",
+    "warmup": "5 min gentle breathing and joint mobility",
+    "cooldown": "10 min full-body stretching or foam rolling",
     "exercises": [
       {
-        "name": "Brisk Walk (Outdoor or Treadmill)",
+        "name": "Leisurely Walk (Outdoors or Treadmill)",
         "sets": 1,
-        "reps": "20 min continuous",
+        "reps": "20-25 minutes",
         "rest_seconds": 0,
-        "notes": "Keep conversational pace (~3.5-4 mph). Focus on posture: shoulders back, chest open. This aids digestion post-meals and boosts mood.",
-        "youtube_search": "proper walking posture form beginner",
-        "youtube_url": "https://www.youtube.com/results?search_query=proper%20walking%20posture%20form%20beginner"
+        "notes": "Keep heart rate relaxed (120-130 bpm max). This is movement for recovery, not cardio. Focus on steady breathing.",
+        "youtube_search": "recovery walk heart rate zone 2 beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=recovery%20walk%20heart%20rate%20zone%202%20beginner"
+      },
+      {
+        "name": "Quad Stretch (Standing)",
+        "sets": 2,
+        "reps": "30 seconds each leg",
+        "rest_seconds": 30,
+        "notes": "Hold the back of a chair for balance. Pull foot toward glutes gently. No bouncing.",
+        "youtube_search": "standing quad stretch proper form",
+        "youtube_url": "https://www.youtube.com/results?search_query=standing%20quad%20stretch%20proper%20form"
+      },
+      {
+        "name": "Hamstring Stretch (Seated)",
+        "sets": 2,
+        "reps": "30 seconds each leg",
+        "rest_seconds": 30,
+        "notes": "Sit on floor, one leg extended. Lean forward gently from hips, not back. Feel the stretch in back of thigh.",
+        "youtube_search": "seated hamstring stretch beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=seated%20hamstring%20stretch%20beginner"
       },
       {
         "name": "Cat-Cow Stretch",
         "sets": 2,
         "reps": "10 slow reps",
-        "rest_seconds": 30,
-        "notes": "Hands under shoulders, knees under hips. Move with breath—inhale arch (cow), exhale round (cat). Mobilizes spine after desk time.",
-        "youtube_search": "cat cow stretch proper form beginner yoga",
-        "youtube_url": "https://www.youtube.com/results?search_query=cat%20cow%20stretch%20proper%20form%20beginner%20yoga"
+        "rest_seconds": 45,
+        "notes": "On hands and knees, alternate arching and rounding your spine. Move with your breath—exhale on cow, inhale on cat.",
+        "youtube_search": "cat cow stretch yoga beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=cat%20cow%20stretch%20yoga%20beginner"
       },
       {
-        "name": "Quadriceps Foam Roll",
-        "sets": 2,
-        "reps": "30 seconds each leg",
-        "rest_seconds": 30,
-        "notes": "Use foam roller on front thigh, avoid rolling directly on knee. Apply light-medium pressure. Rest this on Saturday to prep legs for Monday leg work.",
-        "youtube_search": "foam roller quadriceps beginner technique",
-        "youtube_url": "https://www.youtube.com/results?search_query=foam%20roller%20quadriceps%20beginner%20technique"
-      },
-      {
-        "name": "Child's Pose (Recovery Hold)",
-        "sets": 3,
-        "reps": "30-45 sec hold",
-        "rest_seconds": 15,
-        "notes": "Knees wide, big toes together, forehead down. Breathe deeply. Activates parasympathetic nervous system for better recovery and sleep.",
-        "youtube_search": "child's pose yoga proper alignment beginner",
-        "youtube_url": "https://www.youtube.com/results?search_query=child's%20pose%20yoga%20proper%20alignment%20beginner"
-      },
-      {
-        "name": "Lying Spinal Twist",
-        "sets": 2,
-        "reps": "20 seconds each side",
-        "rest_seconds": 20,
-        "notes": "Lie on back, bring one knee toward opposite shoulder. Gently press knee down. Aids digestion and releases lower back tension from sitting.",
-        "youtube_search": "lying spinal twist yoga beginner safe form",
-        "youtube_url": "https://www.youtube.com/results?search_query=lying%20spinal%20twist%20yoga%20beginner%20safe%20form"
+        "name": "Child's Pose Hold",
+        "sets": 1,
+        "reps": "60 seconds",
+        "rest_seconds": 0,
+        "notes": "Knees wide, forehead to ground, arms extended. Breathe deeply. This is relaxation, not stretching aggressively.",
+        "youtube_search": "child's pose yoga relaxation",
+        "youtube_url": "https://www.youtube.com/results?search_query=child's%20pose%20yoga%20relaxation"
       }
     ]
   },
   "meal_plan": {
-    "total_calories_target": 1710,
-    "protein_g": 157,
+    "total_calories_target": 1780,
+    "protein_g": 147,
     "carbs_g": 160,
     "fat_g": 55,
     "meals": [
       {
         "time": "7:00 AM",
         "name": "Sprout Masala Bowl",
-        "description": "150g mixed sprouts + 80g tomato + 80g cucumber + 30g red onion + 125g Activia yogurt on side + 15ml lemon juice + chaat masala + cumin powder. Mix 1 scoop Collagen Peptides into yogurt. Take: Multivitamin, Vitamin D3, Omega-3 with this meal.",
+        "description": "150g mixed sprouts + 80g tomato + 80g cucumber + 30g red onion + 125g Activia yogurt on side + 15ml lemon juice + chaat masala. Mix 1 scoop Collagen Peptides into yogurt. Take: Multivitamin, Vitamin D3, Omega-3 with this meal.",
         "calories": 390,
         "protein_g": 36
       },
@@ -119,40 +119,40 @@
       },
       {
         "time": "1:00 PM",
-        "name": "Chicken Breast + Veg Rice",
-        "description": "150g chicken breast seasoned with Indian spices + pan fried in 8ml olive oil 6-7 min each side + 150g cooked white rice + 100g spinach + 80g bell pepper stir fried. Take Vitamin E (400 IU) + Zinc (15mg) with this meal.",
-        "calories": 520,
-        "protein_g": 48
+        "name": "Chole + Rice",
+        "description": "200g boiled chickpeas in onion-tomato-chole masala + 150g cooked white rice + 100g curd on side. Use batch-cooked chickpeas from Wednesday. Take Vitamin E (400 IU) + Zinc (15mg) with this meal.",
+        "calories": 530,
+        "protein_g": 22
       },
       {
         "time": "2:00 PM",
         "name": "Protein Shake (rest day)",
-        "description": "1 scoop protein powder in 300ml water or milk. Take after lunch around 2:00 PM on rest day instead of post-gym.",
+        "description": "1 scoop protein powder in 300ml water or milk. Take after lunch around 2:00 PM on rest day.",
         "calories": 150,
         "protein_g": 28
       },
       {
         "time": "4:00 PM",
         "name": "Protein Shake (rest day)",
-        "description": "1 scoop protein powder in 300ml water or milk. Take after lunch around 2:00 PM on rest day instead of post-gym.",
+        "description": "1 scoop protein powder in 300ml water or milk. Take after lunch around 2:00 PM on rest day.",
         "calories": 150,
         "protein_g": 28
       },
       {
         "time": "7:30 PM",
-        "name": "Curd Rice",
-        "description": "100g cooked white rice + 150g curd + 30ml milk + 30g finely chopped onion + 1 green chilli + 10g coriander + mustard seeds tadka in 3ml olive oil + salt. Light and easy Saturday dinner.",
-        "calories": 320,
-        "protein_g": 12
+        "name": "Caesar Salad",
+        "description": "150g romaine lettuce/spinach + 2 boiled eggs halved + 80g cucumber + 60g cherry tomatoes + 60g paneer cubed and pan fried + 15g parmesan. Dressing: 60g curd + 15ml lemon juice + 5g garlic + 5ml olive oil + 3g mustard + black pepper.",
+        "calories": 380,
+        "protein_g": 28
       }
     ]
   },
   "daily_tips": [
-    "Your 54% recovery is Yellow—perfect rest day signal. Skip intensity today and use light walks + stretching to enhance parasympathetic activation. This prepares your body for a strong Monday workout where you can push harder.",
-    "You're hitting 157g protein (2.24g per kg)—excellent for a beginner in a deficit. Today on rest day, ensure both protein shakes arrive exactly at 2:00 PM and 4:00 PM (not mixed up). Spread protein across meals for optimal muscle protein synthesis.",
-    "Your sleep performance was 77% last night—good but not optimal. Tonight, avoid screens after 9:30 PM, keep bedroom cool (18-20°C), and aim for 7.5-8 hours. Better sleep = better recovery = faster six-pack progress. Hydrate well throughout the day (3-4L water)."
+    "Your 82% recovery is elite—use this as fuel to stay disciplined with your meal plan today. Hit all 1780 calories and 147g protein. This is when your body absorbs nutrients best for muscle repair.",
+    "Rest day nutrition tip: Space your protein shakes 2-3 hours apart (aim for 2:00 PM and 4:30 PM) to optimize muscle protein synthesis. Your 147g protein target is perfect for a beginner's recovery needs.",
+    "Sleep is your weak point (65% performance last night). Tonight, aim for 7-8 hours by going to bed 30 minutes earlier. Avoid screens 1 hour before sleep, keep room cool (65-68°F), and hydrate consistently throughout the day."
   ],
-  "progress_insight": "Ash, you're 8 days in with strong consistency—your meal plan adherence and rest day discipline show you're serious about this transformation. Your WHOOP data shows stable 54% recovery and low strain, which means your body is not yet challenged enough to drive significant six-pack progress. Starting Monday, you need to increase workout frequency to 3-4 sessions per week with progressive intensity to create the metabolic stimulus needed for visible ab definition. At your current 1710 kcal intake and 157g protein, the nutrition foundation is solid—now execution on training volume over the next 3 weeks will be the difference between talking about a six-pack and actually seeing one.",
+  "progress_insight": "You're 9 days in and your recovery trajectory is trending upward—today's 82% is your peak and shows your body is adapting well to the stimulus. Your HRV improvement (48.19 ms vs 37.3 ms average) indicates your cardiovascular system is becoming more efficient, which is foundational for visible six-pack definition. The missing piece right now is consistent sleep (65% performance)—lock in 7.5-8 hours nightly and you'll see noticeable body composition changes by week 4. Stay the course with nutrition discipline; your macro targets (147g protein at 70kg bodyweight) are perfect for lean muscle retention during fat loss.",
   "week_number": 2,
-  "days_on_program": 8
+  "days_on_program": 9
 }
