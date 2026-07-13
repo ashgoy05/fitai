@@ -1,17 +1,13 @@
 {
-  "date": "Sunday, July 12, 2026",
-  "recovery_score": 57,
-  "hrv": 43.341114,
-  "resting_hr": 71,
+  "date": "Monday, July 13, 2026",
+  "recovery_score": 46,
+  "hrv": 36.275978,
+  "resting_hr": 74,
   "sleep_hours": null,
-  "sleep_performance": 69,
-  "strain": 0.022463413,
-  "calories_burned": 341,
+  "sleep_performance": 71,
+  "strain": 0.060966786,
+  "calories_burned": 405,
   "recovery_trend": [
-    {
-      "date": "2026-06-13",
-      "score": 49
-    },
     {
       "date": "2026-06-14",
       "score": 54
@@ -35,124 +31,128 @@
     {
       "date": "2026-07-12",
       "score": 57
+    },
+    {
+      "date": "2026-07-13",
+      "score": 46
     }
   ],
   "daily_status": "Yellow",
-  "status_message": "Ash, your recovery has improved to 57%—solid Sunday energy! Your HRV and resting heart rate show your body is adapting well to training. Today is about strategic rest: stick to your meal plan, take a 20-30 minute walk, and prioritize quality sleep tonight. You're building momentum toward that six-pack.",
-  "weekly_insight": "This week shows steady recovery stabilization around 54%, with today's 57% indicating your body is responding positively to the program structure. HRV remains lower than ideal (43ms vs target 50ms+), suggesting your nervous system is still adapting—light activity and consistent sleep will help lift this. Sleep performance at 69% needs attention; prioritize 7-8 hours tonight to maximize recovery for the week ahead.",
-  "monthly_insight": "At day 9, you're in the critical adaptation phase. Your average recovery of 53.4% over 30 days shows your body is learning to handle training stimulus, though consistency in sleep and workout frequency (currently 1 per week average) will accelerate fat loss and core definition. With proper nutrition (1780 kcal, 147g protein) and 3-4 structured workouts weekly, you'll see visible six-pack progress within 4-6 weeks.",
+  "status_message": "Monday mornings hit different, Ash! Your recovery dipped to 46% today, which means your body needs a smart workout, not a brutal one. This is actually perfect for week 2 — we build consistency, not exhaustion. Today's workout is designed to challenge your muscles moderately while respecting your body's signals. Hit the gym at 6 PM with controlled intensity, focus on perfect form, and trust the process. You've got 1860 clean calories locked in to fuel your fat loss and six-pack journey!",
+  "weekly_insight": "Your 7-day recovery average sits at 53.3%, showing a solid Yellow zone trend. HRV is stable around 36.8ms, which is typical for a beginner establishing baseline fitness. However, last night's 71% sleep performance indicates some sleep debt — aim for 7-8 hours tonight to push recovery back to Green zone tomorrow.",
+  "monthly_insight": "You're 10 days into your transformation and already tracking like a pro with WHOOP data. With only 1 workout logged in 30 days, today marks a pivotal moment — consistency over intensity will unlock that six-pack. Your calorie deficit (1860 kcal with 136g protein) is mathematically perfect for fat loss while preserving muscle. Trust the next 20 days of steady work.",
   "workout": {
-    "recommended": false,
-    "type": "Rest Day — Light Walk or Stretching",
-    "duration_minutes": 25,
-    "intensity": "Very Low",
-    "rationale": "Recovery at 57% is solid but not exceptional; Sunday rest day combined with 69% sleep performance means active recovery is ideal. A light 25-minute walk or gentle yoga will promote blood flow, aid digestion of today's 1780 calories, and prepare your nervous system for training resumption. Avoid gym entirely.",
-    "warmup": "5 min gentle full-body stretching (neck rolls, shoulder circles, cat-cow stretch)",
-    "cooldown": "10 min foam rolling (calves, quads, IT band) or child's pose breathing",
+    "recommended": true,
+    "type": "Upper Body + Core Focus (Beginner-Friendly)",
+    "duration_minutes": 45,
+    "intensity": "Medium",
+    "rationale": "Recovery at 46% (Yellow zone) means moderate intensity with controlled volume. Day 10 of program + Monday energy call for upper body work to establish pressing/pulling patterns. Avoid extreme fatigue; focus on movement quality and mind-muscle connection.",
+    "warmup": "5 minutes: 2 min light jog or jumping jacks on spot + 1 min arm circles forward/backward + 1 min bodyweight squats + 1 min dynamic stretching (leg swings, arm swings). Gradually elevate heart rate without exhaustion.",
+    "cooldown": "5 minutes: 1 min slow walking in place + 2 min static stretching (chest, shoulders, quads, hamstrings) holding each 20-30 seconds + 2 min deep breathing (4 count inhale, 6 count exhale). Lower heart rate gradually.",
     "exercises": [
       {
-        "name": "20-Minute Outdoor Walk",
-        "sets": 1,
-        "reps": "continuous",
-        "rest_seconds": 0,
-        "notes": "Steady pace—should be able to hold conversation. Focus on posture: chest up, core engaged.",
-        "youtube_search": "proper walking posture form",
-        "youtube_url": "https://www.youtube.com/results?search_query=proper%20walking%20posture%20form"
+        "name": "Incline Push-ups (Bench or Elevated Surface)",
+        "sets": 3,
+        "reps": "8-10",
+        "rest_seconds": 90,
+        "notes": "Keep elbows at 45° angle to body, not flared out. Lower chest to bench level, pause 1 second, push back. Beginner tip: hands on elevated surface (bench/table) reduces bodyweight load. Maintain neutral spine — no sagging hips.",
+        "youtube_search": "incline push-ups proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=incline%20push-ups%20proper%20form%20beginner"
       },
       {
-        "name": "Child's Pose Breathing",
-        "sets": 2,
-        "reps": "30 seconds each",
-        "rest_seconds": 30,
-        "notes": "Knees wide, toes together, forehead on ground. Breathe deeply—activates parasympathetic nervous system for recovery.",
-        "youtube_search": "child's pose proper form yoga",
-        "youtube_url": "https://www.youtube.com/results?search_query=child's%20pose%20proper%20form%20yoga"
+        "name": "Dumbbell Rows (Single Arm)",
+        "sets": 3,
+        "reps": "10-12 per side",
+        "rest_seconds": 75,
+        "notes": "Use light dumbbell (2-4 kg). Pull elbow back, squeeze shoulder blade. Beginner tip: brace core, don't twist torso. Row to hip height, control the descent. Full range of motion beats heavy weight at this stage.",
+        "youtube_search": "single arm dumbbell rows beginner form",
+        "youtube_url": "https://www.youtube.com/results?search_query=single%20arm%20dumbbell%20rows%20beginner%20form"
       },
       {
-        "name": "Supine Hamstring Stretch",
-        "sets": 2,
-        "reps": "30 seconds per leg",
-        "rest_seconds": 20,
-        "notes": "Lie on back, pull one leg toward chest with hands behind thigh. Keep lower back flat on ground.",
-        "youtube_search": "hamstring stretch supine proper form",
-        "youtube_url": "https://www.youtube.com/results?search_query=hamstring%20stretch%20supine%20proper%20form"
+        "name": "Plank Hold (Modified or Full)",
+        "sets": 3,
+        "reps": "20-30 seconds hold",
+        "rest_seconds": 60,
+        "notes": "Shoulders over wrists, body in straight line from head to heels. Engage core — think about pulling belly button toward spine. Beginner tip: drop to knees if full plank is too hard. Breathing: don't hold breath, breathe steadily.",
+        "youtube_search": "proper plank form beginner modifications",
+        "youtube_url": "https://www.youtube.com/results?search_query=proper%20plank%20form%20beginner%20modifications"
       },
       {
-        "name": "Cat-Cow Stretch",
-        "sets": 2,
-        "reps": "10 slow repetitions",
-        "rest_seconds": 30,
-        "notes": "Move slowly on hands and knees. Inhale (cow), exhale (cat). Releases spine tension from sitting.",
-        "youtube_search": "cat cow stretch proper form yoga",
-        "youtube_url": "https://www.youtube.com/results?search_query=cat%20cow%20stretch%20proper%20form%20yoga"
+        "name": "Goblet Squats (Light Dumbbell or Kettlebell)",
+        "sets": 3,
+        "reps": "12-15",
+        "rest_seconds": 75,
+        "notes": "Hold light weight at chest. Descend by pushing hips back and knees forward. Elbows inside knees at bottom. Beginner tip: go only as deep as mobility allows. Chest stays upright. Focus on leg drive to stand, not momentum.",
+        "youtube_search": "goblet squats proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=goblet%20squats%20proper%20form%20beginner"
       },
       {
-        "name": "90/90 Hip Stretch",
-        "sets": 2,
-        "reps": "30 seconds per side",
-        "rest_seconds": 20,
-        "notes": "Sit with one leg bent in front, one bent to side. Fold forward gently. Excellent for core and hip mobility.",
-        "youtube_search": "90/90 hip stretch proper form",
-        "youtube_url": "https://www.youtube.com/results?search_query=90%2F90%20hip%20stretch%20proper%20form"
+        "name": "Dead Bugs (Bodyweight Core)",
+        "sets": 3,
+        "reps": "10-12 per side",
+        "rest_seconds": 60,
+        "notes": "Lie on back, arms toward ceiling, knees bent 90°. Extend opposite arm and leg while maintaining neutral spine (lower back touching floor). Beginner tip: move slowly, control the movement. Breathe out as you extend. Anti-rotation core work critical for six-pack definition.",
+        "youtube_search": "dead bug exercise proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=dead%20bug%20exercise%20proper%20form%20beginner"
       }
     ]
   },
   "meal_plan": {
-    "total_calories_target": 1780,
-    "protein_g": 147,
+    "total_calories_target": 1860,
+    "protein_g": 136,
     "carbs_g": 160,
     "fat_g": 55,
     "meals": [
       {
         "time": "7:00 AM",
-        "name": "Sprout Masala Bowl",
-        "description": "150g mixed sprouts + 80g tomato + 80g cucumber + 30g red onion + 125g Activia yogurt on side + 15ml lemon juice + chaat masala. Mix 1 scoop Collagen Peptides into yogurt. Take: Multivitamin, Vitamin D3, Omega-3 with this meal.",
-        "calories": 390,
-        "protein_g": 36
+        "name": "Chickpea Salad Bowl",
+        "description": "150g boiled chickpeas + 80g cucumber + 80g tomato + 30g red onion + 125g Activia yogurt as dressing + 15ml lemon juice + chaat masala. Mix 1 scoop Collagen Peptides into yogurt dressing. Take: Multivitamin, Vitamin D3, Omega-3 with this meal.",
+        "calories": 450,
+        "protein_g": 38
       },
       {
         "time": "10:30 AM",
         "name": "Almonds + Walnuts",
-        "description": "15 almonds + 4 walnuts. Take Vitamin E + Zinc with lunch.",
+        "description": "15 almonds + 4 walnuts. Take Vitamin E + Zinc with lunch today.",
         "calories": 180,
         "protein_g": 5
       },
       {
         "time": "1:00 PM",
-        "name": "Chole + Rice",
-        "description": "200g boiled chickpeas in onion-tomato-chole masala + 150g cooked white rice + 100g curd on side. Use batch-cooked chickpeas from Wednesday. Take Vitamin E (400 IU) + Zinc (15mg) with this meal.",
-        "calories": 530,
+        "name": "Rajma Rice",
+        "description": "200g cooked rajma in onion-tomato masala + 150g cooked white rice + side salad. Take Vitamin E (400 IU) + Zinc (15mg) with this meal.",
+        "calories": 520,
         "protein_g": 22
       },
       {
-        "time": "2:00 PM",
-        "name": "Protein Shake (rest day)",
-        "description": "1 scoop protein powder in 300ml water or milk. Take after lunch around 2:00 PM on rest day.",
-        "calories": 150,
-        "protein_g": 28
+        "time": "4:00 PM",
+        "name": "Green Tea + Banana",
+        "description": "1 cup green tea (no sugar) + 1 medium banana. Take Pre-workout + Fiber supplement 30 min before gym at 5:30 PM.",
+        "calories": 80,
+        "protein_g": 1
       },
       {
-        "time": "4:00 PM",
-        "name": "Protein Shake (rest day)",
-        "description": "1 scoop protein powder in 300ml water or milk. Take after lunch around 2:00 PM on rest day.",
+        "time": "After Gym",
+        "name": "Protein Shake",
+        "description": "1 scoop protein powder in 300ml milk or water. Drink within 30 min of finishing gym.",
         "calories": 150,
         "protein_g": 28
       },
       {
         "time": "7:30 PM",
-        "name": "Caesar Salad",
-        "description": "150g romaine lettuce/spinach + 2 boiled eggs halved + 80g cucumber + 60g cherry tomatoes + 60g paneer cubed and pan fried + 15g parmesan. Dressing: 60g curd + 15ml lemon juice + 5g garlic + 5ml olive oil + 3g mustard + black pepper.",
-        "calories": 380,
-        "protein_g": 28
+        "name": "Chicken Pasta",
+        "description": "80g pasta + 120g chicken breast (pan fried with Indian spices) + 80g Target marinara sauce + 80g spinach + 60g bell pepper + 40g onion + 8g garlic + 5ml olive oil.",
+        "calories": 480,
+        "protein_g": 42
       }
     ]
   },
   "daily_tips": [
-    "Your 57% recovery is 'Yellow' zone—good enough for a rest day, but not ready for intense training. Use today to let your body fully adapt. Light walking and stretching will boost tomorrow's readiness without additional stress.",
-    "Drink 3-4 liters of water today alongside your 1780 calorie, 147g protein plan. Hydration improves HRV recovery and aids protein synthesis for lean muscle development. Add a pinch of rock salt or electrolyte to one bottle post-walk.",
-    "Sleep is your bottleneck: 69% performance suggests 5-6 hours last night. Tonight, aim for 7-8 hours in a dark, cool room (65-68°F). Turn off screens 30 mins before bed. Quality sleep will lift your HRV from 43ms toward 50ms+ and accelerate fat loss."
+    "Yellow zone recovery = moderate intensity day. Focus on movement quality over load. Progressive overload happens when your body is in Green (67%+), so today is about building work capacity and movement patterns. This builds the foundation for explosive growth weeks ahead.",
+    "Drink 3-4 liters of water today. Your resting heart rate (74 bpm) suggests mild dehydration stress. Pre-workout at 5:30 PM should include 500ml water. Post-gym protein shake must be consumed within 30 min to capitalize on muscle protein synthesis window.",
+    "Sleep is your real superpower, Ash. Yesterday's 71% sleep performance cost you 11 points on recovery. Tonight: lights off by 10:30 PM, zero screens after 10 PM, cool dark room (65-68°F if possible), and aim for 7.5-8 hours minimum. Your HRV will thank you on Tuesday."
   ],
-  "progress_insight": "At day 9, you're in the sweet spot of early momentum—your recovery trend rising to 57% and consistent meal adherence (1780 kcal, 147g protein) creates the caloric deficit and nutrient foundation six-pack development requires. Your resting heart rate at 71 bpm is solid for a beginner; as training frequency increases to 3-4 workouts weekly, this will drop further, signaling cardiovascular adaptation. The gap between your recovery (57%) and HRV (43ms) suggests your nervous system is still learning—prioritize sleep tonight and tomorrow's training will feel significantly easier. Stick to this plan for 3 more weeks without missing workouts, and you'll see visible core definition emerging as visceral fat decreases.",
+  "progress_insight": "You're at a critical inflection point, Ash. Day 10 with only 1 logged workout means Monday is your momentum builder — commit to this 45-minute session with full presence. Your nutrition is dialed in perfectly (1860 kcal, 136g protein) for a 0.5-0.7kg weekly fat loss while preserving muscle. Recovery of 46% is yellow, not red, which means you can and should train today, but smart. The six-pack will emerge when you maintain this 70/30 rule (70% consistency in nutrition + sleep, 30% intensity in gym). Your WHOOP data shows you have a responsive body — use these metrics to guide effort, not to make excuses.",
   "week_number": 2,
-  "days_on_program": 9
+  "days_on_program": 10
 }
