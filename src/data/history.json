@@ -106,5 +106,16 @@
     "strain": 0.060966786,
     "calories": 405,
     "workout_count": 0
+  },
+  {
+    "date": "2026-07-14",
+    "recovery_score": 46,
+    "hrv": 36.275978,
+    "resting_hr": 74,
+    "sleep_hours": null,
+    "sleep_performance": 71,
+    "strain": 7.0658574,
+    "calories": 2122,
+    "workout_count": 0
   }
 ]
