@@ -109,13 +109,13 @@
   },
   {
     "date": "2026-07-14",
-    "recovery_score": 46,
-    "hrv": 36.275978,
-    "resting_hr": 74,
+    "recovery_score": 42,
+    "hrv": 32.409206,
+    "resting_hr": 77,
     "sleep_hours": null,
-    "sleep_performance": 71,
-    "strain": 7.0658574,
-    "calories": 2122,
+    "sleep_performance": 77,
+    "strain": 0.15576477,
+    "calories": 531,
     "workout_count": 0
   }
 ]
