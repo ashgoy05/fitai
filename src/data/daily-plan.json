@@ -9,11 +9,11 @@
   "calories_burned": 3414,
   "recovery_trend": [
     {
-      "date": "2026-06-16",
+      "date": "2026-07-09",
       "score": 54
     },
     {
-      "date": "2026-06-17",
+      "date": "2026-07-10",
       "score": 54
     },
     {
@@ -38,62 +38,62 @@
     }
   ],
   "daily_status": "Yellow",
-  "status_message": "Ash, your recovery is dipping into Yellow territory at 42%—this tells me you're accumulating fatigue from the week. This is actually GOOD NEWS: it means your body is adapting to training. Today at the gym, we'll dial back intensity and focus on solid form instead of heavy weight. Think of it as building your foundation stronger. Your HRV dropped to 32.4ms (stress is building), but your 77% sleep performance shows you're still recovering well despite missing sleep data. Stick to the plan, nail your nutrition, and bounce back Friday refreshed. You've got this! 💪",
-  "weekly_insight": "Your recovery has been trending down all week (57% → 46% → 42%), which indicates accumulated training stress and possibly insufficient sleep or recovery protocols. HRV has remained stable around 32-36ms, suggesting your nervous system is working hard but not yet over-stressed. By Friday, we expect recovery to bounce back if sleep improves and you follow the Yellow-day workout guidance today.",
-  "monthly_insight": "At 12 days in, you're building consistency and your body is responding to the stimulus—this fatigue is a sign of progress, not failure. Your 1700 kcal + 139g protein protocol is solid for fat loss, and with 3414 kcal burned today, you're in a meaningful deficit. To unlock the six-pack, we need 2-3 more weeks of consistent adherence like this, combined with sleep recovery reaching 8+ hours nightly.",
+  "status_message": "Ash, your recovery is in the Yellow zone at 42% — you're still capable but your body needs respect today. You've hit two consecutive 42% days, which tells me sleep quality last night might have dipped. Don't skip the gym, but dial back intensity and focus on solid form. This mid-week dip is normal; you'll bounce back by Friday if you prioritize sleep tonight. Push smart, not hard.",
+  "weekly_insight": "This week shows a concerning downward trend: you started strong (54-57%) early in the week but dropped to 42% by Wednesday and stayed there. Your HRV averaged 35.9ms (slightly below optimal) and you're averaging only 1 workout per week. The recovery dip suggests either accumulated fatigue, insufficient sleep, or stress — all fixable with better sleep hygiene and a second rest day.",
+  "monthly_insight": "At 12 days in, you're averaging 50.9% recovery monthly with only 2 workouts logged — this is too low for six-pack progress. You need consistency: 3-4 gym sessions weekly minimum to build the lean muscle and metabolic rate needed. Your nutrition plan is solid (1700 kcal, 139g protein), but frequency of training matters more than perfection. Expect visible changes in 4-6 weeks if you hit 3+ workouts weekly and maintain sleep above 7 hours.",
   "workout": {
     "recommended": true,
-    "type": "Upper Body Push + Core Focus (Yellow Day Adaptation)",
-    "duration_minutes": 45,
+    "type": "Moderate Full-Body Push Focus (Chest, Shoulders, Triceps)",
+    "duration_minutes": 40,
     "intensity": "Medium",
-    "rationale": "Recovery at 42% places you in Yellow zone—strong enough to train, but not for heavy progressive overload. Today is Wednesday (mid-week fatigue is normal), and you're at Day 12 where form mastery matters more than weight. We'll focus on upper body pushing and core stability to prepare for abdominal definition while respecting your recovery state.",
-    "warmup": "5 min: 2 min light cardio (walk/slow jog), 30 sec arm circles each direction, 30 sec band pull-aparts (10 reps), 1 min bodyweight shoulder mobility (arm crosses, cat-cow). Focus on activating chest and shoulders gently.",
-    "cooldown": "5 min: 2 min easy walking, 90 sec light stretching (chest doorway stretch 30 sec each side, tricep overhead stretch 30 sec each side, child's pose 30 sec). Hydrate with 500ml water.",
+    "rationale": "Recovery at 42% (Yellow zone) means you can train but not at maximum intensity. Wednesday calls for upper body push work to balance yesterday's likely lower body session. Keep rest periods consistent, maintain crisp form, and skip the last heavy set. Save aggressive overload for when recovery hits 60%+.",
+    "warmup": "5 min: 2 min easy treadmill walk or stationary bike + 30 jumping jacks + 10 arm circles each direction + 10 bodyweight squats + 5 inchworms. Focus on joint mobility, not sweat.",
+    "cooldown": "5 min: Slow walking on treadmill at 3.0 mph + 30 sec chest stretch (doorway) + 30 sec shoulder stretch (cross-body) + 30 sec tricep stretch + 30 sec deep breathing (4 in, 6 out for 1 min).",
     "exercises": [
       {
-        "name": "Push-ups (Incline or Knee Modified)",
+        "name": "Dumbbell Bench Press (Chest Primary)",
+        "sets": 3,
+        "reps": "10-12",
+        "rest_seconds": 75,
+        "notes": "Lie flat on bench, feet flat on floor. Dumbbells at shoulder height, elbows at 45°. Press up, stop just before elbows lock. Control the weight down—do not bounce. Start with 5-8kg dumbbells if unsure.",
+        "youtube_search": "dumbbell bench press proper form beginners",
+        "youtube_url": "https://www.youtube.com/results?search_query=dumbbell%20bench%20press%20proper%20form%20beginners"
+      },
+      {
+        "name": "Incline Push-Ups (Chest Secondary)",
         "sets": 3,
         "reps": "8-10",
-        "rest_seconds": 75,
-        "notes": "Place hands on bench or elevated surface (incline) OR perform on knees if needed. Keep body straight line from head to hips/knees. Lower chest toward surface, elbows at 45° angle to body. Press back up powerfully but controlled. Beginner tip: quality over quantity—stop when form breaks.",
-        "youtube_search": "push ups proper form beginner incline modified",
-        "youtube_url": "https://www.youtube.com/results?search_query=push%20ups%20proper%20form%20beginner%20incline%20modified"
+        "rest_seconds": 60,
+        "notes": "Hands on elevated surface (bench, box, or stairs). Body in straight line from head to heels. Lower chest toward hands, elbows stay 45° from body. Do not sag hips. Easier than floor push-ups, perfect for beginners.",
+        "youtube_search": "incline push up proper form beginners chest",
+        "youtube_url": "https://www.youtube.com/results?search_query=incline%20push%20up%20proper%20form%20beginners%20chest"
       },
       {
-        "name": "Dumbbell Bench Press (or Floor Press)",
+        "name": "Dumbbell Shoulder Press (Shoulders Primary)",
         "sets": 3,
         "reps": "10-12",
         "rest_seconds": 75,
-        "notes": "Lie on flat bench or floor. Hold dumbbells at shoulder height, elbows bent 90°. Press up and together, pause 1 second at top, lower with control. Keep shoulders packed (not shrugged). Beginner tip: lighter weight with perfect form beats heavy and sloppy.",
-        "youtube_search": "dumbbell bench press proper form beginner",
-        "youtube_url": "https://www.youtube.com/results?search_query=dumbbell%20bench%20press%20proper%20form%20beginner"
+        "notes": "Stand with feet shoulder-width apart. Dumbbells at shoulder height, palms forward. Press overhead, stop just short of locking elbows. Lower back to shoulders with control. Avoid arching lower back excessively.",
+        "youtube_search": "dumbbell shoulder press proper form beginners standing",
+        "youtube_url": "https://www.youtube.com/results?search_query=dumbbell%20shoulder%20press%20proper%20form%20beginners%20standing"
       },
       {
-        "name": "Plank Hold (Core Focus)",
+        "name": "Tricep Dips (Triceps Primary)",
         "sets": 3,
-        "reps": "20-30 seconds",
+        "reps": "8-10",
         "rest_seconds": 60,
-        "notes": "Forearms on ground, body straight line from head to heels. Engage core, glutes, and shoulders—no sagging or arching. Breathe steadily. Beginner tip: shorten duration and focus on perfect alignment rather than time. This is CRITICAL for six-pack visibility.",
-        "youtube_search": "plank hold proper form beginner core",
-        "youtube_url": "https://www.youtube.com/results?search_query=plank%20hold%20proper%20form%20beginner%20core"
+        "notes": "Use a bench or sturdy chair behind you. Hands grip edge, body off ground, legs extended or bent (bent = easier). Lower body until elbows reach ~90°. Press back up. Keep elbows close to body, not flaring out.",
+        "youtube_search": "bench tricep dips proper form beginners",
+        "youtube_url": "https://www.youtube.com/results?search_query=bench%20tricep%20dips%20proper%20form%20beginners"
       },
       {
-        "name": "Seated Shoulder Press (Light Weight)",
+        "name": "Lateral Raise (Shoulders Secondary)",
         "sets": 3,
-        "reps": "10-12",
-        "rest_seconds": 75,
-        "notes": "Sit upright with back support. Hold dumbbells at shoulder height, palms forward. Press up overhead until arms nearly extended (not locked). Lower with control to shoulder height. Beginner tip: avoid arching lower back—keep core tight throughout.",
-        "youtube_search": "seated shoulder press proper form beginner dumbbell",
-        "youtube_url": "https://www.youtube.com/results?search_query=seated%20shoulder%20press%20proper%20form%20beginner%20dumbbell"
-      },
-      {
-        "name": "Dead Bug (Core + Anti-Rotation)",
-        "sets": 3,
-        "reps": "8 per side (16 total)",
+        "reps": "12-15",
         "rest_seconds": 60,
-        "notes": "Lie on back, arms extended toward ceiling, knees bent 90°, hips 90°. Slowly lower opposite arm and leg while keeping lower back pressed to floor. Return, alternate sides. Move slowly. Beginner tip: THIS exercise teaches core stability and is GOLD for six-pack development. Don't rush.",
-        "youtube_search": "dead bug exercise proper form beginner core",
-        "youtube_url": "https://www.youtube.com/results?search_query=dead%20bug%20exercise%20proper%20form%20beginner%20core"
+        "notes": "Stand with light dumbbells (3-5kg) at your sides, slight bend in elbows. Raise arms out to sides until shoulder height, thumbs slightly forward. Lower with control. No momentum—this is isolation work. Smaller weight, perfect form.",
+        "youtube_search": "lateral raise dumbbell proper form beginners shoulders",
+        "youtube_url": "https://www.youtube.com/results?search_query=lateral%20raise%20dumbbell%20proper%20form%20beginners%20shoulders"
       }
     ]
   },
@@ -148,11 +148,11 @@
     ]
   },
   "daily_tips": [
-    "Yellow Recovery Day Wisdom: Your 42% recovery means your CNS (central nervous system) is fatigued. Today's workout prioritizes FORM over WEIGHT—use lighter dumbbells, focus on mind-muscle connection, and get a pump rather than a max-out. This builds the foundation for heavier lifts Friday when recovery rebounds.",
-    "Protein Timing is Your Secret Weapon: You're hitting 139g protein across 6 meals—this is PERFECT for muscle preservation during fat loss. That post-gym shake within 30 min is critical today; it'll speed recovery and signal your body to build lean mass, not burn muscle. Consistency here = visible abs in 4-6 weeks.",
-    "Sleep is Your Biggest Lever Right Now: Your sleep performance was 77% last night (data missing exact hours), but that's why recovery is dropping. TONIGHT: aim for 8+ hours with no screens after 10 PM, cool dark room (65-68°F), and keep your 7 AM breakfast ritual—this resets cortisol and primes recovery. One great sleep night will bounce your recovery to Green by Friday."
+    "Yellow recovery = medium intensity only. Do all 5 exercises but reduce weight by 10-15% compared to your best days. Quality reps over ego lifting. Save your heavy sets for Friday when recovery should rebound.",
+    "Your 139g protein target is locked in and perfect for muscle building. Prioritize the Chipotle bowl at lunch and Veggie Omelette post-gym—these are your muscle-building anchors. The 1700 kcal deficit will show results only if you train 3+ times weekly.",
+    "Sleep performance was 77% last night, which partially explains the 42% recovery. Tonight: no screens after 9:30 PM, keep bedroom cool (65-68°F), no caffeine after 2 PM, and aim for 8+ hours. This is non-negotiable for six-pack progress."
   ],
-  "progress_insight": "Ash, you're exactly where you should be at Day 12. Your 3414 kcal burn vs. 1700 kcal intake = 1714 kcal deficit—this is AGGRESSIVE and healthy fat loss territory. Your HRV at 32.4ms and recovery at 42% show your body is under stimulus, which means muscle is being challenged and fat is being mobilized. The six-pack isn't far away: with 139g protein daily (protecting muscle), proper recovery (which improves Friday), and consistency for 3-4 more weeks, you'll start seeing definition in your upper abs. The Yellow-day workout today will keep you progressing without burning out—trust the process, trust the data, and prioritize sleep tonight.",
+  "progress_insight": "After 12 days, you're at a critical fork: your recovery is trending downward (57% to 42%) and you've only completed 2 workouts in a month. The good news is your nutrition plan is dialed in and you're showing up. The reality is that six-pack progress requires consistency—at least 3 gym sessions weekly plus 7+ hour nights. You have the roadmap; now you need the frequency. This week, commit to one more gym session (Thursday or Saturday) and prioritize sleep. By end of July, if you hit 12+ gym sessions and maintain this 1700 kcal intake, you'll see visible core definition and reduced belly fat.",
   "week_number": 2,
   "days_on_program": 12
 }
