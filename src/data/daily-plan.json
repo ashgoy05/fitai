@@ -1,5 +1,5 @@
 {
-  "date": "Monday, July 20, 2026",
+  "date": "Tuesday, July 21, 2026",
   "recovery_score": 46,
   "hrv": 32.862522,
   "resting_hr": 77,
@@ -8,10 +8,6 @@
   "strain": 9.245295,
   "calories_burned": 1677,
   "recovery_trend": [
-    {
-      "date": "2026-07-14",
-      "score": 42
-    },
     {
       "date": "2026-07-15",
       "score": 42
@@ -35,99 +31,103 @@
     {
       "date": "2026-07-20",
       "score": 46
+    },
+    {
+      "date": "2026-07-21",
+      "score": 46
     }
   ],
   "daily_status": "Yellow",
-  "status_message": "Ash, your recovery is in the yellow zone at 46% — solid but not peak. You're 17 days into your six-pack journey and Monday mornings demand smart training. We're doing a MODERATE intensity workout today to respect your body while maintaining momentum. Your 1677 kcal burn yesterday was excellent; today's 1860 kcal meal plan will fuel steady fat loss. No skipping the gym — but we're being tactical, not reckless. Let's build lean muscle smartly.",
-  "weekly_insight": "This week shows a concerning dip in sleep quality (23% performance) despite solid recovery averaging 51.6%. Your HRV stabilized around 32-35ms, which is normal for a beginner, but yesterday's spike to 90% recovery followed by a drop to 46% suggests inconsistent sleep. Focus on sleep hygiene tonight — dark room, no screens after 9 PM, consistent bedtime.",
-  "monthly_insight": "After 17 days, your body is adapting well: consistent 3-4 workouts per week with 52.2% average recovery shows you're not overtraining. However, six-pack abs require consistent caloric deficit + progressive strength training. Your meal plan (1860 kcal, 136g protein) is perfectly calibrated; now it's about sleep consistency and training discipline over the next 2 weeks to see visible abdominal definition.",
+  "status_message": "Ash, your recovery is in the Yellow zone at 46% — moderate recovery after consistent training. Your resting HR of 77 bpm and HRV of 32.8 ms suggest your body is adapting but needs controlled intensity today. We'll do a solid chest and triceps session at medium intensity. Your low sleep performance (23%) is the limiting factor — prioritize 8+ hours tonight. You're 18 days in, consistency is working. Let's earn this lean physique step by step.",
+  "weekly_insight": "This week shows stable but flat recovery averaging 52.1%, with HRV hovering around 35.3 ms—solid baseline for a beginner. The spike to 90% on Saturday (likely a rest or light day) confirms your body responds well to strategic recovery. Sleep data is missing most nights, which is suppressing your overall recovery potential; consistent 7-8 hour nights will unlock faster progress.",
+  "monthly_insight": "At 18 days, you're building a solid foundation: consistent 3-4 gym sessions weekly, stable calorie deficit (1677 burned vs 1840 target = -163 kcal/day), and 157g protein intake supporting muscle retention. Recovery trending around 52% and HRV in the 35 ms range shows your cardiovascular fitness is improving. Six-pack emergence requires 3-4 more weeks of this discipline; focus on sleep discipline now to accelerate fat loss.",
   "workout": {
     "recommended": true,
-    "type": "Upper Body Push + Core (Beginner-friendly Monday)",
+    "type": "Chest, Triceps & Core - Medium Intensity",
     "duration_minutes": 45,
     "intensity": "Medium",
-    "rationale": "Recovery at 46% falls in Yellow zone. Resting HR 77 is slightly elevated, indicating incomplete recovery. HRV 32.86ms is baseline for you. This is NOT a day for heavy progressive overload; instead, focus on solid form, controlled reps, and core engagement to build abdominal strength without excessive CNS fatigue. Upper body work today leaves lower body fresh for Wednesday.",
-    "warmup": "5 minutes: 2 min light jogging or jumping jacks, 30 sec arm circles (forward + backward), 30 sec bodyweight squats, 1 min dynamic stretching (leg swings, torso rotations, shoulder dislocations with resistance band).",
-    "cooldown": "5 minutes: 1 min walking to lower HR, 2 min deep breathing, 2 min static stretching (chest, shoulders, triceps, hip flexors).",
+    "rationale": "Recovery at 46% (Yellow zone) calls for controlled intensity without aggressive overload. Tuesday is ideal for pushing chest and triceps moderately. Your low sleep (23% performance) means avoid extreme fatigue; keep rest periods standard. You have office work today, so chest press and tricep work won't interfere with arm soreness tomorrow.",
+    "warmup": "5 min light cardio (brisk walk or easy jog) + 10 arm circles each direction + 10 cat-cow stretches + 5 pushups at 50% effort to activate chest",
+    "cooldown": "2 min slow walking + 30 sec chest doorway stretch (each side) + 30 sec overhead tricep stretch (each arm) + 2 min deep breathing",
     "exercises": [
       {
-        "name": "Push-ups (Incline or Knee)",
-        "sets": 3,
-        "reps": "8-12",
-        "rest_seconds": 60,
-        "notes": "Hands shoulder-width apart. If full push-ups are hard, use an incline (bench/table) or do them on knees. Keep core tight, don't let hips sag. Lower until chest nearly touches ground, explosive push back up.",
-        "youtube_search": "perfect push up form beginners step by step",
-        "youtube_url": "https://www.youtube.com/results?search_query=perfect%20push%20up%20form%20beginners%20step%20by%20step"
-      },
-      {
-        "name": "Dumbbell Bench Press (or Chest Press Machine)",
+        "name": "Dumbbell Bench Press",
         "sets": 3,
         "reps": "10-12",
         "rest_seconds": 60,
-        "notes": "If using dumbbells, start light (5-8kg each). Feet flat, shoulder blades retracted. Lower dumbbells to chest level with elbows at 45 degrees, press explosively. Control the descent.",
+        "notes": "Lie flat on bench, feet firmly on floor, dumbbells at chest level with elbows at 45° angle. Press straight up, squeeze at top, control on the way down. Keep shoulders packed (not shrugged). Start light—form over weight.",
         "youtube_search": "dumbbell bench press proper form beginner",
         "youtube_url": "https://www.youtube.com/results?search_query=dumbbell%20bench%20press%20proper%20form%20beginner"
       },
       {
-        "name": "Plank (Core)",
+        "name": "Incline Pushups (Hands on Bench)",
         "sets": 3,
-        "reps": "20-30 seconds hold",
-        "rest_seconds": 45,
-        "notes": "This is CRITICAL for six-pack definition. Forearms on ground, shoulders above elbows, body in straight line from head to heels. Engage core, don't let hips drop. Breathe steadily. Add 5 seconds each week.",
-        "youtube_search": "how to do a perfect plank form beginners",
-        "youtube_url": "https://www.youtube.com/results?search_query=how%20to%20do%20a%20perfect%20plank%20form%20beginners"
-      },
-      {
-        "name": "Dumbbell Rows (Single Arm)",
-        "sets": 3,
-        "reps": "10-12 per side",
+        "reps": "10-12",
         "rest_seconds": 60,
-        "notes": "One knee on bench or ground. Row dumbbell up to ribcage, squeeze shoulder blade back. Lower with control. This builds back strength to support posture and chest definition.",
-        "youtube_search": "single arm dumbbell row proper form beginner",
-        "youtube_url": "https://www.youtube.com/results?search_query=single%20arm%20dumbbell%20row%20proper%20form%20beginner"
+        "notes": "Hands on a bench or elevated surface, body in straight line from head to heels. Lower chest toward bench, elbows at 45° angle. Easier than floor pushups but builds chest endurance. Engage core throughout.",
+        "youtube_search": "incline pushups bench proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=incline%20pushups%20bench%20proper%20form%20beginner"
       },
       {
-        "name": "Bicycle Crunches (Core)",
+        "name": "Tricep Dips (Bench or Box)",
         "sets": 3,
-        "reps": "12-15 per side",
+        "reps": "10-12",
+        "rest_seconds": 60,
+        "notes": "Hands behind you on a bench, legs extended or bent (easier). Lower body by bending elbows to 90°, then push back up. Keep elbows close to body, not flaring outward. This isolates triceps beautifully for arm definition.",
+        "youtube_search": "tricep dips bench proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=tricep%20dips%20bench%20proper%20form%20beginner"
+      },
+      {
+        "name": "Dumbbell Tricep Kickbacks",
+        "sets": 3,
+        "reps": "12-15",
         "rest_seconds": 45,
-        "notes": "Lie on back, hands behind head. Bring right elbow to left knee while extending right leg. Alternate sides in a controlled pedaling motion. This directly targets rectus abdominis (visible abs).",
-        "youtube_search": "bicycle crunches proper form beginners",
-        "youtube_url": "https://www.youtube.com/results?search_query=bicycle%20crunches%20proper%20form%20beginners"
+        "notes": "Hinge at hips, one knee on bench, dumbbell in one hand. Extend arm straight back, squeeze tricep at top, control the return. Light weight is better—focus on the burn. Alternate sides each set.",
+        "youtube_search": "dumbbell tricep kickbacks proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=dumbbell%20tricep%20kickbacks%20proper%20form%20beginner"
+      },
+      {
+        "name": "Plank Hold",
+        "sets": 3,
+        "reps": "30-45 seconds",
+        "rest_seconds": 60,
+        "notes": "Forearms on ground, body straight line from head to heels. Engage core hard—imagine pulling navel toward spine. Do not let hips sag or pike upward. This builds the core tension needed for visible abs.",
+        "youtube_search": "plank hold proper form beginner core",
+        "youtube_url": "https://www.youtube.com/results?search_query=plank%20hold%20proper%20form%20beginner%20core"
       }
     ]
   },
   "meal_plan": {
-    "total_calories_target": 1860,
-    "protein_g": 136,
+    "total_calories_target": 1840,
+    "protein_g": 157,
     "carbs_g": 160,
     "fat_g": 55,
     "meals": [
       {
         "time": "7:00 AM",
-        "name": "Chickpea Salad Bowl",
-        "description": "150g boiled chickpeas + 80g cucumber + 80g tomato + 30g red onion + 125g Activia yogurt as dressing + 15ml lemon juice + chaat masala. Mix 1 scoop Collagen Peptides into yogurt dressing. Take: Multivitamin, Vitamin D3, Omega-3 with this meal.",
-        "calories": 450,
-        "protein_g": 38
+        "name": "Overnight Oats",
+        "description": "50g rolled oats + 200ml low fat milk + 125g Activia yogurt + 1 apple or orange + 15 almonds. Mix 1 scoop Collagen Peptides into oats the night before. Take: Multivitamin, Vitamin D3, Omega-3 with this meal.",
+        "calories": 520,
+        "protein_g": 40
       },
       {
         "time": "10:30 AM",
-        "name": "Almonds + Walnuts",
-        "description": "15 almonds + 4 walnuts. Take Vitamin E + Zinc with lunch today.",
-        "calories": 180,
-        "protein_g": 5
+        "name": "Black Coffee + Fruit",
+        "description": "1 cup black coffee (no sugar, no milk) + 1 apple or orange. Take Vitamin E + Zinc with lunch.",
+        "calories": 80,
+        "protein_g": 1
       },
       {
         "time": "1:00 PM",
-        "name": "Rajma Rice",
-        "description": "200g cooked rajma in onion-tomato masala + 150g cooked white rice + side salad. Take Vitamin E (400 IU) + Zinc (15mg) with this meal.",
-        "calories": 520,
-        "protein_g": 22
+        "name": "Chipotle Chicken Rice Bowl",
+        "description": "150g Costco Chipotle chicken + 150g cooked white rice + 100g spinach sautéed + 80g bell pepper + 50g onion + 5ml olive oil + curd on side. Pack from home. Take Vitamin E (400 IU) + Zinc (15mg) with this meal.",
+        "calories": 530,
+        "protein_g": 45
       },
       {
         "time": "4:00 PM",
-        "name": "Green Tea + Banana",
-        "description": "1 cup green tea (no sugar) + 1 medium banana. Take Pre-workout + Fiber supplement 30 min before gym at 5:30 PM.",
+        "name": "Mint Tea + Banana",
+        "description": "1 cup mint tea + 1 banana. Take Pre-workout + Fiber 30 min before gym at 5:00 PM.",
         "calories": 80,
         "protein_g": 1
       },
@@ -141,18 +141,18 @@
       {
         "time": "7:30 PM",
         "name": "Chicken Pasta",
-        "description": "80g pasta + 120g chicken breast (pan fried with Indian spices) + 80g Target marinara sauce + 80g spinach + 60g bell pepper + 40g onion + 8g garlic + 5ml olive oil.",
+        "description": "80g pasta + 120g chicken breast + 80g Target marinara sauce + 80g spinach + 60g bell pepper + 40g onion + 8g garlic + 5ml olive oil. Cook double on Monday — reheat tonight.",
         "calories": 480,
         "protein_g": 42
       }
     ]
   },
   "daily_tips": [
-    "Recovery at 46% means your nervous system needs respect today. Do NOT attempt 1-rep maxes or explosive heavy lifting. Stick to controlled, moderate intensity with perfect form. This builds muscle safely and prevents burnout.",
-    "Your meal plan delivers 136g protein and 1860 kcal — this is a modest deficit that preserves muscle while burning fat. Timing: eat your green tea + banana pre-workout at 4:30 PM (30 min before gym), and drink your protein shake IMMEDIATELY after your 6:00 PM session ends.",
-    "Last night's sleep performance was critically low at 23%. Tonight, aim for 8 hours minimum. Create a wind-down routine: lights off by 10:30 PM, no phone 30 min before bed, room temperature 65-68°F. This will push recovery to green zone by Tuesday and accelerate six-pack progress."
+    "Yellow recovery means controlled effort today—focus on perfect form over heavy weight. Your body is adapting; respect the process. 3 sets of 10-12 reps at medium intensity will drive fat loss without compromising recovery for the rest of the week.",
+    "Your low sleep (23% performance) is a red flag for hormonal disruption and fat loss plateau. Skipped sleep sabotages cortisol and leptin, killing six-pack progress. Tonight: no phone 30 min before bed, cool dark room, aim for 8 hours minimum. This matters as much as the gym.",
+    "Pre-workout + Fiber at 4:00 PM is perfectly timed before 5:30 PM gym session. The banana provides fast carbs (energy spike), mint tea aids digestion and appetite control. Drink your protein shake within 30 min post-workout—this is non-negotiable for muscle retention during your fat loss phase."
   ],
-  "progress_insight": "You're 17 days in and showing discipline: 3 workouts last week, consistent meal compliance, and smart supplementation (collagen, vitamin D3, zinc). Your body composition is beginning to shift—fat loss is real, but six-pack visibility requires 2-3 more weeks of consistent execution at this caloric intake. The key now is sleep consistency (you're at 23% performance—unacceptable for fat loss) and strict adherence to the moderate-intensity program. By early August, if you nail sleep and workouts, your abs will start showing. You're building the foundation; results compound in week 4-5. Stay disciplined.",
+  "progress_insight": "Ash, at day 18 you're tracking exactly where you need to be: negative calorie balance (-163 kcal/day), high protein intake (157g), and consistent gym attendance 3-4x weekly. Your resting heart rate of 77 bpm and HRV of 32.8 ms show your cardiovascular system is responding to training. However, sleep performance at 23% is your main obstacle to six-pack emergence—poor sleep spikes cortisol and slows fat loss. Double down on sleep discipline for the next 14 days, maintain your meal plan perfectly, and expect visible abs by mid-August. You've built the habits; now optimize recovery.",
   "week_number": 3,
-  "days_on_program": 17
+  "days_on_program": 18
 }
