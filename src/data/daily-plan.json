@@ -1,5 +1,5 @@
 {
-  "date": "Wednesday, July 22, 2026",
+  "date": "Thursday, July 23, 2026",
   "recovery_score": 46,
   "hrv": 32.862522,
   "resting_hr": 77,
@@ -8,10 +8,6 @@
   "strain": 9.245295,
   "calories_burned": 1677,
   "recovery_trend": [
-    {
-      "date": "2026-07-16",
-      "score": 46
-    },
     {
       "date": "2026-07-17",
       "score": 49
@@ -35,99 +31,103 @@
     {
       "date": "2026-07-22",
       "score": 46
+    },
+    {
+      "date": "2026-07-23",
+      "score": 46
     }
   ],
   "daily_status": "Yellow",
-  "status_message": "Ash, your recovery is in the yellow zone today at 46% — you can train, but keep it moderate. Your sleep performance dropped to 23% last night, which is affecting your nervous system readiness (HRV down to 32.8). Push hard enough to build the discipline, but not so hard that you crash further. Today's gym session at 5:30 PM will help reset your cortisol, but sleep tonight MUST be a priority for that six-pack progress you're chasing.",
-  "weekly_insight": "This week shows inconsistency: you had one excellent recovery day (90% on July 18), but dropped back to 46% for four consecutive days. Your HRV is hovering around 33-35ms, which is low for building muscle and burning fat efficiently. Sleep data is missing, but your 23% sleep performance today suggests poor sleep quality or duration is the bottleneck holding back your progress.",
-  "monthly_insight": "After 19 days on program, you're averaging 51.6% recovery and only 4 workouts in 30 days — this is too inconsistent for six-pack results. Your calorie deficit (1700 kcal/day) is solid, but without consistent sleep (7-9 hours nightly) and recovery management, your body won't build the lean muscle definition you need. Focus this week on fixing sleep quality; it's the missing 20% that will unlock your progress.",
+  "status_message": "Ash, your recovery is in the moderate zone at 46%—solid for a Thursday workout but not exceptional. Your sleep performance yesterday was very low at 23%, which is directly impacting your HRV (32.8ms) and resting heart rate (77 bpm). This means you'll do a controlled, medium-intensity session today at 5:30 PM focusing on form and consistency rather than pushing hard. Think of today as a building block, not a peak day. Tonight, prioritize quality sleep—aim for 7-8 hours and avoid screens 30 minutes before bed.",
+  "weekly_insight": "This week shows a concerning pattern: after that strong 90% recovery spike on Friday (July 18), your recovery has flatlined at 46% for 5 consecutive days. Your HRV has dropped from a weekly average of 35ms to 32.8ms today, suggesting accumulated fatigue or insufficient sleep depth. The 23% sleep performance last night is the red flag—your body isn't getting restorative rest despite the hours in bed.",
+  "monthly_insight": "At day 20, you're showing solid commitment with 4 workouts in 30 days, but your recovery metrics reveal a critical bottleneck: inconsistent sleep quality is sabotaging fat loss potential. Your resting heart rate of 77 bpm is elevated for someone on a 1700 kcal diet, indicating your nervous system is stressed rather than adapting. To unlock the six-pack progress, sleep quality must improve before increasing workout frequency—quality over quantity at this stage.",
   "workout": {
     "recommended": true,
-    "type": "Moderate Upper Body + Core Focus (Wednesday)",
+    "type": "Upper Body + Core Focus (Medium Intensity)",
     "duration_minutes": 45,
     "intensity": "Medium",
-    "rationale": "Recovery at 46% (Yellow zone) allows training, but HRV of 32.8ms and 23% sleep performance indicate your central nervous system needs controlled intensity. Focus on compound movements with good form rather than heavy weights. Core work will activate abs and prepare body for visible definition as fat loss continues.",
-    "warmup": "5 min: Arm circles 20 each direction, cat-cow stretches 10 reps, band pull-aparts 15 reps, light rowing motion 15 reps, jump rope or jogging in place 1 min",
-    "cooldown": "5 min: Child's pose 30 sec, chest stretch against wall 30 sec each side, shoulder rolls backward 15 reps, deep breathing 10 slow breaths, light walking 1 min",
+    "rationale": "46% recovery = Yellow zone. Your moderate recovery combined with low sleep performance (23%) means avoid high-intensity or heavy weights today. A controlled upper body + core session will maintain progress without overstressing your nervous system. Thursday typically focuses on upper body, and medium intensity allows skill refinement which is crucial at week 3.",
+    "warmup": "5 min easy: 2 min light jogging in place or jumping jacks at 50% effort, 1 min arm circles (10 forward, 10 back), 1 min scapular push-ups (bodyweight, focus on form), 1 min glute bridges (15 reps, activate posterior chain)",
+    "cooldown": "5 min: 2 min walking and deep breathing (in for 4, out for 4), 1 min quad stretch (30 sec each leg), 1 min chest doorway stretch (30 sec), 1 min spinal twist (30 sec each side)",
     "exercises": [
       {
-        "name": "Dumbbell Bench Press (or Chest Press Machine)",
+        "name": "Incline Push-ups (on bench or elevated surface)",
         "sets": 3,
         "reps": "10-12",
         "rest_seconds": 60,
-        "notes": "Keep shoulders packed back into bench. Lower weight to chest level, pause 1 sec, press up. Elbows at 45° angle from body, not flared out. Start with 8-10 lb dumbbells.",
-        "youtube_search": "dumbbell bench press proper form beginner",
-        "youtube_url": "https://www.youtube.com/results?search_query=dumbbell%20bench%20press%20proper%20form%20beginner"
+        "notes": "Hands on bench shoulder-width apart, body in straight line from head to heels. Lower chest toward bench, elbows at 45°. Easier than floor push-ups—build confidence with this variation.",
+        "youtube_search": "incline push-ups proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=incline%20push-ups%20proper%20form%20beginner"
       },
       {
-        "name": "Assisted Pull-ups or Lat Pulldown",
+        "name": "Dumbbell Bent-Over Rows",
         "sets": 3,
         "reps": "10-12",
         "rest_seconds": 60,
-        "notes": "Grip slightly wider than shoulder width. Pull elbows down and back, squeeze shoulder blades together at bottom. Control the return. If using machine, adjust weight so you can complete 12 reps with clean form.",
-        "youtube_search": "lat pulldown proper form beginner",
-        "youtube_url": "https://www.youtube.com/results?search_query=lat%20pulldown%20proper%20form%20beginner"
+        "notes": "Hinge at hips (45° angle), knees slightly bent, pull dumbbells to ribcage. Lead with elbows, not hands. Keep core tight throughout. Start with light weight (2-3 kg dumbbells).",
+        "youtube_search": "dumbbell bent over rows beginner form",
+        "youtube_url": "https://www.youtube.com/results?search_query=dumbbell%20bent%20over%20rows%20beginner%20form"
       },
       {
-        "name": "Dumbbell Rows (Single Arm)",
-        "sets": 3,
-        "reps": "10-12 each side",
-        "rest_seconds": 60,
-        "notes": "Knee on bench, opposite foot planted. Row dumbbell toward hip, squeeze shoulder blade. Keep torso still, no twisting. Start with 8 lb dumbbells, focus on mind-muscle connection.",
-        "youtube_search": "single arm dumbbell row proper form beginner",
-        "youtube_url": "https://www.youtube.com/results?search_query=single%20arm%20dumbbell%20row%20proper%20form%20beginner"
-      },
-      {
-        "name": "Hanging Knee Tucks or Machine Ab Crunch",
-        "sets": 3,
-        "reps": "12-15",
-        "rest_seconds": 45,
-        "notes": "If hanging: engage core first, bring knees up to chest slowly, lower with control. If machine: sit with back flat against pad, pull handles down using abdominal muscles, not arms. Visible abs require this core work.",
-        "youtube_search": "hanging knee tucks proper form beginner",
-        "youtube_url": "https://www.youtube.com/results?search_query=hanging%20knee%20tucks%20proper%20form%20beginner"
-      },
-      {
-        "name": "Incline Dumbbell Curls",
+        "name": "Dumbbell Shoulder Press (seated on bench)",
         "sets": 3,
         "reps": "10-12",
         "rest_seconds": 60,
-        "notes": "Sit on incline bench at 45°, arms extended toward floor. Curl weights up, squeezing biceps at top. Lower slowly with control. Elbows stay tucked to sides, no swinging. 6-8 lb dumbbells to start.",
-        "youtube_search": "incline dumbbell curls proper form beginner",
-        "youtube_url": "https://www.youtube.com/results?search_query=incline%20dumbbell%20curls%20proper%20form%20beginner"
+        "notes": "Sit upright, dumbbells at shoulder height, press overhead with control. Avoid arching back excessively. Full range of motion is more important than heavy weight at this stage.",
+        "youtube_search": "seated dumbbell shoulder press beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=seated%20dumbbell%20shoulder%20press%20beginner"
+      },
+      {
+        "name": "Dead Bugs (Core)",
+        "sets": 3,
+        "reps": "12 per side",
+        "rest_seconds": 60,
+        "notes": "Lie on back, arms extended toward ceiling, knees at 90°. Slowly lower opposite arm and leg while keeping lower back flat. This is a core anti-extension exercise—essential for six-pack development.",
+        "youtube_search": "dead bug exercise proper form beginner",
+        "youtube_url": "https://www.youtube.com/results?search_query=dead%20bug%20exercise%20proper%20form%20beginner"
+      },
+      {
+        "name": "Plank Hold (Modified on knees if needed)",
+        "sets": 3,
+        "reps": "20-30 seconds hold",
+        "rest_seconds": 60,
+        "notes": "Shoulders over hands, body in straight line. Engage core, don't let hips sag. If too hard, drop to knees but maintain core tension. This builds anti-gravity core strength.",
+        "youtube_search": "plank hold proper form beginner modifications",
+        "youtube_url": "https://www.youtube.com/results?search_query=plank%20hold%20proper%20form%20beginner%20modifications"
       }
     ]
   },
   "meal_plan": {
     "total_calories_target": 1700,
-    "protein_g": 139,
+    "protein_g": 118,
     "carbs_g": 160,
     "fat_g": 55,
     "meals": [
       {
         "time": "7:00 AM",
         "name": "Overnight Oats",
-        "description": "50g rolled oats + 200ml low fat milk + 125g Activia yogurt + 1 banana + 4 walnuts. Mix 1 scoop Collagen Peptides into oats the night before. Take: Multivitamin, Vitamin D3, Omega-3 with this meal.",
+        "description": "50g rolled oats + 200ml low fat milk + 125g Activia yogurt + 1 apple + 15 almonds. Mix 1 scoop Collagen Peptides into oats. Take: Multivitamin, Vitamin D3, Omega-3 with this meal.",
         "calories": 520,
         "protein_g": 40
       },
       {
         "time": "10:30 AM",
         "name": "Black Coffee + Fruit",
-        "description": "1 cup black coffee (no sugar, no milk) + 1 orange or apple. Take Vitamin E + Zinc with lunch.",
+        "description": "1 cup black coffee (no sugar) + 1 banana. Take Vitamin E + Zinc with lunch.",
         "calories": 80,
         "protein_g": 1
       },
       {
         "time": "1:00 PM",
-        "name": "Chipotle Chicken Rice Bowl",
-        "description": "150g Costco Chipotle chicken + 150g cooked white rice + 100g spinach + 80g bell pepper + 5ml olive oil. Pack from home. Take Vitamin E (400 IU) + Zinc (15mg) with this meal.",
-        "calories": 530,
-        "protein_g": 45
+        "name": "Dal Tadka + Rice",
+        "description": "80g dry moong/masoor dal (pressure cooked) + 150g cooked white rice + onion-tomato-garlic tadka + 80g spinach + 5ml olive oil. Pack from home. Take Vitamin E (400 IU) + Zinc (15mg) with this meal.",
+        "calories": 490,
+        "protein_g": 22
       },
       {
         "time": "4:00 PM",
-        "name": "Green Tea + Banana",
-        "description": "1 cup green tea + 1 banana. Take Pre-workout + Fiber 30 min before gym at 5:00 PM.",
+        "name": "Mint Tea + Banana",
+        "description": "1 cup mint tea + 1 banana. Take Pre-workout + Fiber 30 min before gym at 5:00 PM.",
         "calories": 80,
         "protein_g": 1
       },
@@ -141,18 +141,18 @@
       {
         "time": "7:30 PM",
         "name": "Veggie Omelette",
-        "description": "3 eggs beaten + 60g bell pepper + 80g spinach + 40g onion + 40g tomato + 5ml olive oil. Cook on medium-low, fold in half. Light and quick post-gym dinner.",
-        "calories": 340,
-        "protein_g": 24
+        "description": "3 eggs beaten + 60g bell pepper + 80g spinach + 40g onion + 40g tomato + 1 green chilli + 5ml olive oil. Serve with 60g cooked rice on side.",
+        "calories": 380,
+        "protein_g": 26
       }
     ]
   },
   "daily_tips": [
-    "Yellow recovery zone = train smart, not hard. Focus on perfect form and mind-muscle connection rather than lifting heavy. This builds the neural patterns you'll use when recovery improves, without taxing your system further.",
-    "Your 139g protein intake today is excellent for fat loss and muscle preservation at 70kg bodyweight. Spread it across meals (especially post-gym shake within 30 min) to maximize muscle protein synthesis and keep you satiated all day.",
-    "Sleep performance was only 23% last night — likely poor quality or insufficient hours. Tonight: dim lights by 9 PM, no screens after 9:30 PM, keep room cool (18-20°C), and aim for 8 hours minimum. Sleep is where six-packs are built, not in the gym."
+    "Yellow Zone Workout: You're in moderate recovery—do today's medium-intensity upper body + core session with perfect form over heavy weight. This trains your nervous system efficiently while preserving energy for recovery. No ego lifting today.",
+    "Protein Timing: You're hitting 118g protein today (excellent), but with your 23% sleep performance, make sure the post-gym protein shake is consumed within 30 minutes. Poor sleep reduces muscle protein synthesis, so timing matters more today.",
+    "Sleep Priority Tonight: Your 23% sleep performance yesterday is the primary issue sabotaging recovery. Tonight: dim lights by 9:30 PM, no phone in bed, keep room temp at 18-19°C, and aim for 8 hours. This ONE night of quality sleep could reset your recovery to 60%+ by tomorrow."
   ],
-  "progress_insight": "Ash, you're at day 19 with solid nutritional discipline (1700 kcal, 139g protein), but your recovery pattern is sabotaging your six-pack progress. Four consecutive days at 46% recovery plus missing sleep data suggests you're not giving your body the conditions to build muscle and reveal abs. Your HRV of 32.8 is low, indicating your nervous system is stressed — this could be from work (you're at office today), poor sleep, or inadequate recovery days. Here's the reality: the diet and workouts are set correctly, but if you don't fix sleep (aim for 7-9 hours tonight and every night), and include 2-3 full recovery days per week, you'll plateau by month 2. This week, prioritize sleep over extra gym sessions — that's the unlock you need.",
+  "progress_insight": "Ash, you're 20 days in with solid meal consistency (1700 kcal daily), excellent protein intake (118g), and 4 workouts logged—this is genuine progress. However, your recovery metrics reveal the real blocker: your resting heart rate (77 bpm) is too high for someone in a caloric deficit, and your HRV (32.8ms) is low, both signs your nervous system is stressed rather than adapting. The flatlined 46% recovery for 5 consecutive days after that 90% spike suggests sleep quality collapsed. Six-pack development requires two things simultaneously: caloric deficit (you're nailing this) AND nervous system recovery (you're not). Fix sleep this week, and you'll see recovery jump to 55%+ and HRV climb toward 38-40ms, which is when real fat loss accelerates.",
   "week_number": 3,
-  "days_on_program": 19
+  "days_on_program": 20
 }
